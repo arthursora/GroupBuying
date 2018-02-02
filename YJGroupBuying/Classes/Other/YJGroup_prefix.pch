@@ -1,0 +1,44 @@
+//
+//  YJGroup_prefix.pch
+//  YJGroupBuying
+//
+//  Created by 朱亚杰 on 2018/2/1.
+//  Copyright © 2018年 朱亚杰. All rights reserved.
+//
+
+#ifndef YJGroup_prefix_pch
+#define YJGroup_prefix_pch
+
+#ifdef __OBJC__
+
+#import "YJGCommon.h"
+#import "MJExtension.h"
+#import "MJRefresh.h"
+#import "UIImageView+WebCache.h"
+#import <Masonry.h>
+
+#endif
+
+// 处于开发阶段
+#ifdef DEBUG
+#define YJLog(...) NSLog(__VA_ARGS__)
+#else
+
+// 处于发布阶段
+#define YJLog(...)
+
+#endif
+
+static NSString * const CommentAppKey = @"975791789";
+static NSString * const CommentAppSecret = @"5e4dcaf696394707b9a0139e40074ce9";
+
+// RGBA颜色
+#define RGBACOLOR(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+// RGB颜色
+#define RGBCOLOR(r, g, b) RGBACOLOR(r, g, b, 1)
+
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* YJGroup_prefix_pch */
