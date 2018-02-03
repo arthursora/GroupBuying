@@ -16,4 +16,9 @@
 
 @property (nonatomic, strong) NSArray *districts;
 
+@property (nonatomic, copy) NSString *pinyin;
+
+@property (nonatomic, copy) NSString *firstName;
+
+
 @end

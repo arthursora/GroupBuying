@@ -27,7 +27,9 @@
 
 - (void)setSearchText:(NSString *)searchText {
     
-    NSPredicate *pre = [NSPredicate predicateWithFormat:@"name contains %@", searchText];
+    _searchText = searchText.lowercaseString;
+    
+    NSPredicate *pre = [NSPredicate predicateWithFormat:@"name contains %@ or pinyin contains %@ or firstName contains %@", _searchText, _searchText, _searchText];
     _searchCities = [_cities filteredArrayUsingPredicate:pre];
     [self.tableView reloadData];
 }

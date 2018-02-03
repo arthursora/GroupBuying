@@ -27,6 +27,39 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self setupUI];
+    
+    [self setupCity];
+}
+
+#pragma mark - viewDidLoad
+- (void)setupCity {
+    
+    _groups = [NSMutableArray array];
+    
+    NSMutableArray *hotCities = [NSMutableArray array];
+    NSArray *cityArr = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Cities" ofType:@"plist"]];
+    
+    for (NSDictionary *cityDict in cityArr) {
+        
+        YJGGroup *group = [YJGGroup mj_objectWithKeyValues:cityDict];
+        [_groups addObject:group];
+        
+        for (YJGCity *city in group.cities) {
+            if (city.hot) {
+                [hotCities addObject:city];
+            }
+        }
+    }
+    
+    YJGGroup *hotGroup = [[YJGGroup alloc] init];
+    hotGroup.name = @"热门城市";
+    hotGroup.cities = hotCities;
+    [_groups insertObject:hotGroup atIndex:0];
+}
+
+- (void)setupUI {
+    
     CGFloat viewW = self.view.bounds.size.width;
     CGFloat viewH = self.view.bounds.size.height;
     
@@ -47,25 +80,22 @@
     tableView.rowHeight = 44;
     tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    tableView.backgroundColor = [UIColor clearColor];
+    tableView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:tableView];
     _tableView = tableView;
     
     [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"city"];
-    
-    _groups = [NSMutableArray array];
-    NSArray *cityArr = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Cities" ofType:@"plist"]];
-    
-    for (NSDictionary *dict in cityArr) {
-        [_groups addObject:[YJGGroup mj_objectWithKeyValues:dict]];
-    }
 }
 
 #pragma mark - UISearchBarDelegate
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
     
     if (searchText.length == 0) {
-        _searchCityVC.searchText = searchText;
+        
+        [_searchCityVC.view removeFromSuperview];
+        [_searchCityVC removeFromParentViewController];
+        _searchCityVC = nil;
+        
     }else {
         
         if(!_searchCityVC) {
@@ -90,6 +120,7 @@
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
     
     [searchBar setShowsCancelButton:YES animated:YES];
+    if (_searchCityVC) return;
     
     UIView *coverView = [[UIView alloc] init];
     coverView.frame = _tableView.frame;
@@ -108,6 +139,8 @@
 - (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar {
     
     [searchBar setShowsCancelButton:NO animated:YES];
+    
+    if (_searchCityVC) return;
     
     [UIView animateWithDuration:0.5 animations:^{
         _coverView.alpha = 0.0;

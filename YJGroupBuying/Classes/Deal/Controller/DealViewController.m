@@ -18,7 +18,7 @@
     [super viewDidLoad];
     
     self.title = @"团购";
-    self.view.backgroundColor = [UIColor blueColor];
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)didReceiveMemoryWarning {

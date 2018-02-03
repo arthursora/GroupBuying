@@ -206,6 +206,7 @@
 		957B975F2022C58900B68C58 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				95A4663820255E4D00B1D164 /* Lib */,
 				959540A42024456000B2A2AD /* Resource */,
 				957B97602022C58900B68C58 /* AppDelegate.h */,
 				957B97612022C58900B68C58 /* AppDelegate.m */,
@@ -357,14 +358,21 @@
 		959540B3202449C300B2A2AD /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				959540B4202449C300B2A2AD /* YJGGroup.h */,
-				959540B5202449C300B2A2AD /* YJGCity.h */,
-				959540B6202449C300B2A2AD /* YJGDistrict.m */,
-				959540B7202449C300B2A2AD /* YJGGroup.m */,
 				959540B8202449C300B2A2AD /* YJGDistrict.h */,
+				959540B6202449C300B2A2AD /* YJGDistrict.m */,
+				959540B4202449C300B2A2AD /* YJGGroup.h */,
+				959540B7202449C300B2A2AD /* YJGGroup.m */,
+				959540B5202449C300B2A2AD /* YJGCity.h */,
 				959540B9202449C300B2A2AD /* YJGCity.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		95A4663820255E4D00B1D164 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Lib;
 			sourceTree = "<group>";
 		};
 		A902DC31DA86B0C3EFB55330 /* Frameworks */ = {
