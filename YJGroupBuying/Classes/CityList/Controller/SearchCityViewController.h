@@ -10,4 +10,7 @@
 
 @interface SearchCityViewController : UITableViewController
 
+@property (nonatomic, copy) NSString *searchText;
+@property (nonatomic, strong) NSArray *cities;
+
 @end

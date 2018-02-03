@@ -7,9 +7,12 @@
 //
 
 #import "SearchCityViewController.h"
+#import "YJGCity.h"
 
 @interface SearchCityViewController ()
-
+{
+    NSArray *_searchCities;
+}
 @end
 
 @implementation SearchCityViewController
@@ -17,39 +20,33 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    self.tableView.rowHeight = 45;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"searchCell"];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)setSearchText:(NSString *)searchText {
+    
+    NSPredicate *pre = [NSPredicate predicateWithFormat:@"name contains %@", searchText];
+    _searchCities = [_cities filteredArrayUsingPredicate:pre];
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    
+    return _searchCities.count;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    // Configure the cell...
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"searchCell" forIndexPath:indexPath];
+    
+    YJGCity *city = _searchCities[indexPath.row];
+    cell.textLabel.text = city.name;
     
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.

@@ -65,12 +65,24 @@
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
     
     if (searchText.length == 0) {
-        
+        _searchCityVC.searchText = searchText;
     }else {
         
         if(!_searchCityVC) {
             _searchCityVC = [[SearchCityViewController alloc] init];
+            [self addChildViewController:_searchCityVC];
+            
+            NSMutableArray *cities = [NSMutableArray array];
+            for (YJGGroup *group in _groups) {
+                [cities addObjectsFromArray:group.cities];
+            }
+            _searchCityVC.cities = [cities copy];
         }
+        
+        _searchCityVC.searchText = searchText;
+        
+        _searchCityVC.view.frame = _tableView.frame;
+        [self.view addSubview:_searchCityVC.view];
     }
 }
 
