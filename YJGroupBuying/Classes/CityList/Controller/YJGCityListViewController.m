@@ -7,9 +7,9 @@
 //
 
 #import "YJGCityListViewController.h"
-#import "YJGGroup.h"
-#import "YJGCity.h"
 #import "SearchCityViewController.h"
+#import "YJCityTool.h"
+#import "YJGGroup.h"
 
 @interface YJGCityListViewController () <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate>
 {
@@ -29,35 +29,10 @@
     
     [self setupUI];
     
-    [self setupCity];
+    _groups = [YJCityTool totalCities];
 }
 
 #pragma mark - viewDidLoad
-- (void)setupCity {
-    
-    _groups = [NSMutableArray array];
-    
-    NSMutableArray *hotCities = [NSMutableArray array];
-    NSArray *cityArr = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Cities" ofType:@"plist"]];
-    
-    for (NSDictionary *cityDict in cityArr) {
-        
-        YJGGroup *group = [YJGGroup mj_objectWithKeyValues:cityDict];
-        [_groups addObject:group];
-        
-        for (YJGCity *city in group.cities) {
-            if (city.hot) {
-                [hotCities addObject:city];
-            }
-        }
-    }
-    
-    YJGGroup *hotGroup = [[YJGGroup alloc] init];
-    hotGroup.name = @"热门城市";
-    hotGroup.cities = hotCities;
-    [_groups insertObject:hotGroup atIndex:0];
-}
-
 - (void)setupUI {
     
     CGFloat viewW = self.view.bounds.size.width;
@@ -104,6 +79,7 @@
             
             NSMutableArray *cities = [NSMutableArray array];
             for (YJGGroup *group in _groups) {
+                if(group.name.length > 1) continue;
                 [cities addObjectsFromArray:group.cities];
             }
             _searchCityVC.cities = [cities copy];
@@ -187,6 +163,17 @@
     cell.textLabel.text = city.name;
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    YJGGroup *group = _groups[indexPath.section];
+    YJGCity *city = group.cities[indexPath.row];
+    
+    [YJCityTool addRecentCity:city];
+    
+    NSDictionary *info = @{@"city":city};
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"cityChanged" object:info];
 }
 
 - (NSArray<NSString *> *)sectionIndexTitlesForTableView:(UITableView *)tableView {

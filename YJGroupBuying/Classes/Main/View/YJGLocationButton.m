@@ -8,6 +8,7 @@
 
 #import "YJGLocationButton.h"
 #import "YJGCityListViewController.h"
+#import "YJGCity.h"
 
 @interface YJGLocationButton() <UIPopoverControllerDelegate>
 {
@@ -32,12 +33,29 @@
         [self setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
         [self setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
         self.titleLabel.textAlignment = NSTextAlignmentCenter;
+        self.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
         
         [self addTarget:self action:@selector(locClick) forControlEvents:UIControlEventTouchUpInside];
         
-        self.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(cityChanged:) name:@"cityChanged" object:nil];
     }
     return self;
+}
+
+- (void)cityChanged:(NSNotification *)note {
+    
+    YJGCity *city = note.object[@"city"];
+    [self setTitle:city.name forState:UIControlStateNormal];
+    
+    [_popover dismissPopoverAnimated:YES];
+    _popover = nil;
+    
+    self.selected = NO;
+}
+
+- (void)dealloc {
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)locClick {

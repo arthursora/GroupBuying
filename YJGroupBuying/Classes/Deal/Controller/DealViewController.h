@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DealViewController : UIViewController
+@interface DealViewController : UICollectionViewController
 
 @end

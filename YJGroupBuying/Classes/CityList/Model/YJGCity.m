@@ -11,6 +11,13 @@
 
 @implementation YJGCity
 
++ (NSDictionary *)mj_replacedKeyFromPropertyName {
+    
+    return @{
+             @"cityId":@"city_id"
+             };
+}
+
 + (NSDictionary *)mj_objectClassInArray {
     
     return @{
@@ -26,6 +33,16 @@
     
     NSString *cityString = [[NSString stringWithFormat:@"%@",cityMutableString] lowercaseString];
     return cityString;
+}
+
+- (void)setDistricts:(NSArray *)districts {
+    
+    NSMutableArray *array = [NSMutableArray array];
+    YJGDistrict *district = [[YJGDistrict alloc] init];
+    district.name = @"全部商区";
+    [array addObject:district];
+    [array addObjectsFromArray:districts];
+    _districts = array;
 }
 
 - (void)setName:(NSString *)name {

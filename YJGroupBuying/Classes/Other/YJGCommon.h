@@ -10,7 +10,6 @@
 #define YJGCommon_h
 
 
-
 #define YJGDockButtonW 100
 #define YJGDockButtonH 80
 
@@ -29,5 +28,9 @@
 //  屏幕高度
 #define SCREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height
 
+
+#define YJMenuBtnSelectedNote @"MenuBtnSelected"
+#define YJMenuBtnTitleKey @"MenuBtnTitle"
+#define YJMenuBtnModelKey @"MenuBtnModelKey"
 
 #endif /* YJGCommon_h */

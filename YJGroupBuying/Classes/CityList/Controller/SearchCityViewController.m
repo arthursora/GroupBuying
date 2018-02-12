@@ -7,7 +7,7 @@
 //
 
 #import "SearchCityViewController.h"
-#import "YJGCity.h"
+#import "YJCityTool.h"
 
 @interface SearchCityViewController ()
 {
@@ -49,6 +49,16 @@
     
     return cell;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    YJGCity *city = _searchCities[indexPath.row];
+    [YJCityTool addRecentCity:city];
+    
+    NSDictionary *info = @{@"city":city};
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"cityChanged" object:info];
+}
+
 
 /*
 // Override to support conditional editing of the table view.

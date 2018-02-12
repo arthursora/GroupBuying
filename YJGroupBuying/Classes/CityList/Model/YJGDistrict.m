@@ -10,6 +10,17 @@
 
 @implementation YJGDistrict
 
+- (NSArray *)children {
+    
+    return _neighborhoods;
+}
 
+- (void)setNeighborhoods:(NSArray *)neighborhoods {
+    
+    NSMutableArray *array = [NSMutableArray array];
+    [array addObject:@"全部"];
+    [array addObjectsFromArray:neighborhoods];
+    _neighborhoods = array;
+}
 
 @end

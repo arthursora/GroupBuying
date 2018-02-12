@@ -12,10 +12,14 @@
 #ifdef __OBJC__
 
 #import "YJGCommon.h"
+#import "YJTool.h"
 #import "MJExtension.h"
 #import "MJRefresh.h"
+#import "MBProgressHUD+DST.h"
 #import "UIImageView+WebCache.h"
 #import <Masonry.h>
+#import "FMDB.h"
+#import "UIImage+IW.h"
 
 #endif
 
@@ -36,6 +40,9 @@ static NSString * const CommentAppSecret = @"5e4dcaf696394707b9a0139e40074ce9";
 #define RGBACOLOR(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
 // RGB颜色
 #define RGBCOLOR(r, g, b) RGBACOLOR(r, g, b, 1)
+
+// 随机色
+#define YJRandomColor RGBACOLOR(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256), 1)
 
 
 // Include any system framework and library headers here that should be included in all compilation units.

@@ -10,6 +10,8 @@
 
 @interface YJGCity : NSObject
 
+@property (nonatomic, assign)NSInteger cityId;
+
 @property (nonatomic, copy) NSString *name;
 
 @property (nonatomic, assign) BOOL hot;
@@ -19,6 +21,8 @@
 @property (nonatomic, copy) NSString *pinyin;
 
 @property (nonatomic, copy) NSString *firstName;
+
+@property (nonatomic, copy) NSString *addsDate;
 
 
 @end

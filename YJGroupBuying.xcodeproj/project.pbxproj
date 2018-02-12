@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		575A5C3BD185118F67B96B00 /* libPods-YJGroupBuying.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E7D80948DE1485FBF237D4E5 /* libPods-YJGroupBuying.a */; };
+		95200A0B2030345500940BF7 /* YJDealBottomSecMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 95200A0A2030345500940BF7 /* YJDealBottomSecMenuButton.m */; };
 		957661E92021BAA3007C7757 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 957661E82021BAA3007C7757 /* Assets.xcassets */; };
 		957661EC2021BAA3007C7757 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 957661EA2021BAA3007C7757 /* LaunchScreen.storyboard */; };
 		957661EF2021BAA3007C7757 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 957661EE2021BAA3007C7757 /* main.m */; };
@@ -30,6 +31,31 @@
 		959540BC202449C300B2A2AD /* YJGCity.m in Sources */ = {isa = PBXBuildFile; fileRef = 959540B9202449C300B2A2AD /* YJGCity.m */; };
 		959540BF202449E200B2A2AD /* YJGCityListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 959540BE202449E200B2A2AD /* YJGCityListViewController.m */; };
 		959540C32024646400B2A2AD /* SearchCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 959540C22024646400B2A2AD /* SearchCityViewController.m */; };
+		9598EF9B202BE5D5009B9D3A /* YJDealCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9598EF99202BE5D5009B9D3A /* YJDealCell.m */; };
+		9598EF9C202BE5D5009B9D3A /* YJDealCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9598EF9A202BE5D5009B9D3A /* YJDealCell.xib */; };
+		9598EFA5202C23B4009B9D3A /* YJDealParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 9598EFA4202C23B4009B9D3A /* YJDealParam.m */; };
+		9598EFA9202C41CB009B9D3A /* MBProgressHUD+DST.m in Sources */ = {isa = PBXBuildFile; fileRef = 9598EFA8202C41CB009B9D3A /* MBProgressHUD+DST.m */; };
+		9598EFB3202C4288009B9D3A /* YJLastestCityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9598EFAB202C4288009B9D3A /* YJLastestCityManager.m */; };
+		9598EFB4202C4288009B9D3A /* YJHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9598EFB0202C4288009B9D3A /* YJHttpTool.m */; };
+		9598EFB5202C4288009B9D3A /* YJTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9598EFB1202C4288009B9D3A /* YJTool.m */; };
+		9598EFB6202C4288009B9D3A /* YJDealTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9598EFB2202C4288009B9D3A /* YJDealTool.m */; };
+		9598EFB9202C4EDC009B9D3A /* YJCityTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9598EFB8202C4EDC009B9D3A /* YJCityTool.m */; };
+		9598EFBC202C7419009B9D3A /* YJDealTopMunu.m in Sources */ = {isa = PBXBuildFile; fileRef = 9598EFBB202C7419009B9D3A /* YJDealTopMunu.m */; };
+		9598EFBF202C742C009B9D3A /* YJDealTopMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9598EFBE202C742C009B9D3A /* YJDealTopMenuButton.m */; };
+		95A090C2202B20D800F1373D /* DPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A090BE202B20D800F1373D /* DPRequest.m */; };
+		95A090C3202B20D800F1373D /* DPAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A090BF202B20D800F1373D /* DPAPI.m */; };
+		95A090C7202B245E00F1373D /* YJDealsResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A090C6202B245E00F1373D /* YJDealsResult.m */; };
+		95A090CA202B26BA00F1373D /* YJDeal.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A090C9202B26BA00F1373D /* YJDeal.m */; };
+		95A27EC8202D4ECE007E544E /* YJNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A27EC7202D4ECE007E544E /* YJNavigationController.m */; };
+		95A27ECB202D4F5F007E544E /* UIImage+IW.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A27ECA202D4F5E007E544E /* UIImage+IW.m */; };
+		95A27ECE202D84E3007E544E /* Categories.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95A27ECC202D84E3007E544E /* Categories.plist */; };
+		95A27ECF202D84E3007E544E /* Orders.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95A27ECD202D84E3007E544E /* Orders.plist */; };
+		95A27ED2202D97AE007E544E /* YJCategoryTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A27ED1202D97AE007E544E /* YJCategoryTool.m */; };
+		95A27ED5202D9944007E544E /* YJDealBottomModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A27ED4202D9944007E544E /* YJDealBottomModel.m */; };
+		95A27ED8202D997C007E544E /* YJCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A27ED7202D997C007E544E /* YJCategory.m */; };
+		95A27EDB202D998A007E544E /* YJOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A27EDA202D998A007E544E /* YJOrder.m */; };
+		95A27EDE202D9C4C007E544E /* YJDealBottomMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A27EDD202D9C4C007E544E /* YJDealBottomMenu.m */; };
+		95A27EE1202D9C69007E544E /* YJDealBottomMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A27EE0202D9C69007E544E /* YJDealBottomMenuButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +77,8 @@
 
 /* Begin PBXFileReference section */
 		534088691A5A91C702C4B91E /* Pods-YJGroupBuying.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YJGroupBuying.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YJGroupBuying/Pods-YJGroupBuying.debug.xcconfig"; sourceTree = "<group>"; };
+		95200A092030345500940BF7 /* YJDealBottomSecMenuButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJDealBottomSecMenuButton.h; sourceTree = "<group>"; };
+		95200A0A2030345500940BF7 /* YJDealBottomSecMenuButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJDealBottomSecMenuButton.m; sourceTree = "<group>"; };
 		957661DC2021BAA3007C7757 /* YJGroupBuying.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YJGroupBuying.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		957661E82021BAA3007C7757 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		957661EB2021BAA3007C7757 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,6 +126,54 @@
 		959540C0202459D900B2A2AD /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		959540C12024646400B2A2AD /* SearchCityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchCityViewController.h; sourceTree = "<group>"; };
 		959540C22024646400B2A2AD /* SearchCityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchCityViewController.m; sourceTree = "<group>"; };
+		9598EF98202BE5D5009B9D3A /* YJDealCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJDealCell.h; sourceTree = "<group>"; };
+		9598EF99202BE5D5009B9D3A /* YJDealCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJDealCell.m; sourceTree = "<group>"; };
+		9598EF9A202BE5D5009B9D3A /* YJDealCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YJDealCell.xib; sourceTree = "<group>"; };
+		9598EFA3202C23B4009B9D3A /* YJDealParam.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJDealParam.h; sourceTree = "<group>"; };
+		9598EFA4202C23B4009B9D3A /* YJDealParam.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJDealParam.m; sourceTree = "<group>"; };
+		9598EFA7202C41CB009B9D3A /* MBProgressHUD+DST.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+DST.h"; sourceTree = "<group>"; };
+		9598EFA8202C41CB009B9D3A /* MBProgressHUD+DST.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+DST.m"; sourceTree = "<group>"; };
+		9598EFAB202C4288009B9D3A /* YJLastestCityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJLastestCityManager.m; sourceTree = "<group>"; };
+		9598EFAC202C4288009B9D3A /* YJHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJHttpTool.h; sourceTree = "<group>"; };
+		9598EFAD202C4288009B9D3A /* YJTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJTool.h; sourceTree = "<group>"; };
+		9598EFAE202C4288009B9D3A /* YJDealTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJDealTool.h; sourceTree = "<group>"; };
+		9598EFAF202C4288009B9D3A /* YJLastestCityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJLastestCityManager.h; sourceTree = "<group>"; };
+		9598EFB0202C4288009B9D3A /* YJHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJHttpTool.m; sourceTree = "<group>"; };
+		9598EFB1202C4288009B9D3A /* YJTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJTool.m; sourceTree = "<group>"; };
+		9598EFB2202C4288009B9D3A /* YJDealTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJDealTool.m; sourceTree = "<group>"; };
+		9598EFB7202C4EDC009B9D3A /* YJCityTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJCityTool.h; sourceTree = "<group>"; };
+		9598EFB8202C4EDC009B9D3A /* YJCityTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJCityTool.m; sourceTree = "<group>"; };
+		9598EFBA202C7419009B9D3A /* YJDealTopMunu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJDealTopMunu.h; sourceTree = "<group>"; };
+		9598EFBB202C7419009B9D3A /* YJDealTopMunu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJDealTopMunu.m; sourceTree = "<group>"; };
+		9598EFBD202C742C009B9D3A /* YJDealTopMenuButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJDealTopMenuButton.h; sourceTree = "<group>"; };
+		9598EFBE202C742C009B9D3A /* YJDealTopMenuButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJDealTopMenuButton.m; sourceTree = "<group>"; };
+		95A090BD202B20D800F1373D /* DPAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPAPI.h; sourceTree = "<group>"; };
+		95A090BE202B20D800F1373D /* DPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPRequest.m; sourceTree = "<group>"; };
+		95A090BF202B20D800F1373D /* DPAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPAPI.m; sourceTree = "<group>"; };
+		95A090C0202B20D800F1373D /* DPConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPConstants.h; sourceTree = "<group>"; };
+		95A090C1202B20D800F1373D /* DPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPRequest.h; sourceTree = "<group>"; };
+		95A090C5202B245E00F1373D /* YJDealsResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJDealsResult.h; sourceTree = "<group>"; };
+		95A090C6202B245E00F1373D /* YJDealsResult.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJDealsResult.m; sourceTree = "<group>"; };
+		95A090C8202B26BA00F1373D /* YJDeal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJDeal.h; sourceTree = "<group>"; };
+		95A090C9202B26BA00F1373D /* YJDeal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJDeal.m; sourceTree = "<group>"; };
+		95A27EC6202D4ECE007E544E /* YJNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJNavigationController.h; sourceTree = "<group>"; };
+		95A27EC7202D4ECE007E544E /* YJNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJNavigationController.m; sourceTree = "<group>"; };
+		95A27EC9202D4F5E007E544E /* UIImage+IW.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+IW.h"; sourceTree = "<group>"; };
+		95A27ECA202D4F5E007E544E /* UIImage+IW.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+IW.m"; sourceTree = "<group>"; };
+		95A27ECC202D84E3007E544E /* Categories.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Categories.plist; sourceTree = "<group>"; };
+		95A27ECD202D84E3007E544E /* Orders.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Orders.plist; sourceTree = "<group>"; };
+		95A27ED0202D97AE007E544E /* YJCategoryTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJCategoryTool.h; sourceTree = "<group>"; };
+		95A27ED1202D97AE007E544E /* YJCategoryTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJCategoryTool.m; sourceTree = "<group>"; };
+		95A27ED3202D9944007E544E /* YJDealBottomModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJDealBottomModel.h; sourceTree = "<group>"; };
+		95A27ED4202D9944007E544E /* YJDealBottomModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJDealBottomModel.m; sourceTree = "<group>"; };
+		95A27ED6202D997C007E544E /* YJCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJCategory.h; sourceTree = "<group>"; };
+		95A27ED7202D997C007E544E /* YJCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJCategory.m; sourceTree = "<group>"; };
+		95A27ED9202D998A007E544E /* YJOrder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJOrder.h; sourceTree = "<group>"; };
+		95A27EDA202D998A007E544E /* YJOrder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJOrder.m; sourceTree = "<group>"; };
+		95A27EDC202D9C4C007E544E /* YJDealBottomMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJDealBottomMenu.h; sourceTree = "<group>"; };
+		95A27EDD202D9C4C007E544E /* YJDealBottomMenu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJDealBottomMenu.m; sourceTree = "<group>"; };
+		95A27EDF202D9C69007E544E /* YJDealBottomMenuButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJDealBottomMenuButton.h; sourceTree = "<group>"; };
+		95A27EE0202D9C69007E544E /* YJDealBottomMenuButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJDealBottomMenuButton.m; sourceTree = "<group>"; };
 		CAF135FFEE83705E0CD38307 /* Pods-YJGroupBuying.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YJGroupBuying.release.xcconfig"; path = "Pods/Target Support Files/Pods-YJGroupBuying/Pods-YJGroupBuying.release.xcconfig"; sourceTree = "<group>"; };
 		E7D80948DE1485FBF237D4E5 /* libPods-YJGroupBuying.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YJGroupBuying.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -206,6 +282,8 @@
 		957B975F2022C58900B68C58 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				9598EFAA202C4288009B9D3A /* Tool */,
+				9598EFA6202C41CB009B9D3A /* Category */,
 				95A4663820255E4D00B1D164 /* Lib */,
 				959540A42024456000B2A2AD /* Resource */,
 				957B97602022C58900B68C58 /* AppDelegate.h */,
@@ -231,6 +309,8 @@
 			children = (
 				957B97652022C5BB00B68C58 /* YJGMainViewController.h */,
 				957B97662022C5BB00B68C58 /* YJGMainViewController.m */,
+				95A27EC6202D4ECE007E544E /* YJNavigationController.h */,
+				95A27EC7202D4ECE007E544E /* YJNavigationController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -273,6 +353,8 @@
 			isa = PBXGroup;
 			children = (
 				957B977D2023450C00B68C58 /* Controller */,
+				9598EF8F202BE4F4009B9D3A /* View */,
+				95A090C4202B244F00F1373D /* Model */,
 			);
 			path = Deal;
 			sourceTree = "<group>";
@@ -323,6 +405,8 @@
 		959540A42024456000B2A2AD /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				95A27ECC202D84E3007E544E /* Categories.plist */,
+				95A27ECD202D84E3007E544E /* Orders.plist */,
 				959540A52024456800B2A2AD /* Cities.plist */,
 			);
 			path = Resource;
@@ -368,9 +452,91 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		9598EF8F202BE4F4009B9D3A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9598EF98202BE5D5009B9D3A /* YJDealCell.h */,
+				9598EF99202BE5D5009B9D3A /* YJDealCell.m */,
+				9598EF9A202BE5D5009B9D3A /* YJDealCell.xib */,
+				9598EFBA202C7419009B9D3A /* YJDealTopMunu.h */,
+				9598EFBB202C7419009B9D3A /* YJDealTopMunu.m */,
+				9598EFBD202C742C009B9D3A /* YJDealTopMenuButton.h */,
+				9598EFBE202C742C009B9D3A /* YJDealTopMenuButton.m */,
+				95A27EDC202D9C4C007E544E /* YJDealBottomMenu.h */,
+				95A27EDD202D9C4C007E544E /* YJDealBottomMenu.m */,
+				95A27EDF202D9C69007E544E /* YJDealBottomMenuButton.h */,
+				95A27EE0202D9C69007E544E /* YJDealBottomMenuButton.m */,
+				95200A092030345500940BF7 /* YJDealBottomSecMenuButton.h */,
+				95200A0A2030345500940BF7 /* YJDealBottomSecMenuButton.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9598EFA6202C41CB009B9D3A /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				95A27EC9202D4F5E007E544E /* UIImage+IW.h */,
+				95A27ECA202D4F5E007E544E /* UIImage+IW.m */,
+				9598EFA7202C41CB009B9D3A /* MBProgressHUD+DST.h */,
+				9598EFA8202C41CB009B9D3A /* MBProgressHUD+DST.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		9598EFAA202C4288009B9D3A /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				9598EFAF202C4288009B9D3A /* YJLastestCityManager.h */,
+				9598EFAB202C4288009B9D3A /* YJLastestCityManager.m */,
+				9598EFAC202C4288009B9D3A /* YJHttpTool.h */,
+				9598EFB0202C4288009B9D3A /* YJHttpTool.m */,
+				9598EFAE202C4288009B9D3A /* YJDealTool.h */,
+				9598EFB2202C4288009B9D3A /* YJDealTool.m */,
+				9598EFAD202C4288009B9D3A /* YJTool.h */,
+				9598EFB1202C4288009B9D3A /* YJTool.m */,
+				9598EFB7202C4EDC009B9D3A /* YJCityTool.h */,
+				9598EFB8202C4EDC009B9D3A /* YJCityTool.m */,
+				95A27ED0202D97AE007E544E /* YJCategoryTool.h */,
+				95A27ED1202D97AE007E544E /* YJCategoryTool.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		95A090BC202B20D800F1373D /* dianpingapi */ = {
+			isa = PBXGroup;
+			children = (
+				95A090BD202B20D800F1373D /* DPAPI.h */,
+				95A090BF202B20D800F1373D /* DPAPI.m */,
+				95A090C0202B20D800F1373D /* DPConstants.h */,
+				95A090C1202B20D800F1373D /* DPRequest.h */,
+				95A090BE202B20D800F1373D /* DPRequest.m */,
+			);
+			path = dianpingapi;
+			sourceTree = "<group>";
+		};
+		95A090C4202B244F00F1373D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				95A090C5202B245E00F1373D /* YJDealsResult.h */,
+				95A090C6202B245E00F1373D /* YJDealsResult.m */,
+				95A090C8202B26BA00F1373D /* YJDeal.h */,
+				95A090C9202B26BA00F1373D /* YJDeal.m */,
+				9598EFA3202C23B4009B9D3A /* YJDealParam.h */,
+				9598EFA4202C23B4009B9D3A /* YJDealParam.m */,
+				95A27ED3202D9944007E544E /* YJDealBottomModel.h */,
+				95A27ED4202D9944007E544E /* YJDealBottomModel.m */,
+				95A27ED6202D997C007E544E /* YJCategory.h */,
+				95A27ED7202D997C007E544E /* YJCategory.m */,
+				95A27ED9202D998A007E544E /* YJOrder.h */,
+				95A27EDA202D998A007E544E /* YJOrder.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		95A4663820255E4D00B1D164 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				95A090BC202B20D800F1373D /* dianpingapi */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -492,9 +658,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9598EF9C202BE5D5009B9D3A /* YJDealCell.xib in Resources */,
 				957661EC2021BAA3007C7757 /* LaunchScreen.storyboard in Resources */,
 				957661E92021BAA3007C7757 /* Assets.xcassets in Resources */,
+				95A27ECE202D84E3007E544E /* Categories.plist in Resources */,
 				959540A62024456800B2A2AD /* Cities.plist in Resources */,
+				95A27ECF202D84E3007E544E /* Orders.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -573,23 +742,46 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95A090C3202B20D800F1373D /* DPAPI.m in Sources */,
 				957B97672022C5BB00B68C58 /* YJGMainViewController.m in Sources */,
+				95A27EDB202D998A007E544E /* YJOrder.m in Sources */,
+				95A27ECB202D4F5F007E544E /* UIImage+IW.m in Sources */,
+				95A090C7202B245E00F1373D /* YJDealsResult.m in Sources */,
+				9598EF9B202BE5D5009B9D3A /* YJDealCell.m in Sources */,
 				957B97702023143700B68C58 /* YJGMoreButton.m in Sources */,
+				95A090CA202B26BA00F1373D /* YJDeal.m in Sources */,
 				957B97872023452900B68C58 /* DealViewController.m in Sources */,
+				9598EFB9202C4EDC009B9D3A /* YJCityTool.m in Sources */,
+				95A27ED5202D9944007E544E /* YJDealBottomModel.m in Sources */,
 				959540BB202449C300B2A2AD /* YJGGroup.m in Sources */,
+				95A090C2202B20D800F1373D /* DPRequest.m in Sources */,
+				95A27EC8202D4ECE007E544E /* YJNavigationController.m in Sources */,
+				9598EFA5202C23B4009B9D3A /* YJDealParam.m in Sources */,
+				95A27EE1202D9C69007E544E /* YJDealBottomMenuButton.m in Sources */,
+				9598EFBC202C7419009B9D3A /* YJDealTopMunu.m in Sources */,
+				95A27ED2202D97AE007E544E /* YJCategoryTool.m in Sources */,
 				959540BF202449E200B2A2AD /* YJGCityListViewController.m in Sources */,
 				957B97762023145000B68C58 /* YJGLocationButton.m in Sources */,
 				959540BC202449C300B2A2AD /* YJGCity.m in Sources */,
 				957B976D2023140000B68C58 /* YJGDockButton.m in Sources */,
 				957661EF2021BAA3007C7757 /* main.m in Sources */,
+				9598EFA9202C41CB009B9D3A /* MBProgressHUD+DST.m in Sources */,
+				95200A0B2030345500940BF7 /* YJDealBottomSecMenuButton.m in Sources */,
 				959540BA202449C300B2A2AD /* YJGDistrict.m in Sources */,
 				957B97732023144500B68C58 /* YJGTabButton.m in Sources */,
 				957B97642022C58900B68C58 /* AppDelegate.m in Sources */,
 				957B97792023148000B68C58 /* YJGDock.m in Sources */,
 				957B97842023451E00B68C58 /* CollectionViewController.m in Sources */,
+				9598EFB4202C4288009B9D3A /* YJHttpTool.m in Sources */,
 				959540C32024646400B2A2AD /* SearchCityViewController.m in Sources */,
+				9598EFB3202C4288009B9D3A /* YJLastestCityManager.m in Sources */,
+				9598EFB5202C4288009B9D3A /* YJTool.m in Sources */,
+				95A27EDE202D9C4C007E544E /* YJDealBottomMenu.m in Sources */,
+				9598EFB6202C4288009B9D3A /* YJDealTool.m in Sources */,
+				95A27ED8202D997C007E544E /* YJCategory.m in Sources */,
 				957B978D2023453B00B68C58 /* ProfileViewController.m in Sources */,
 				957B978A2023453000B68C58 /* MapViewController.m in Sources */,
+				9598EFBF202C742C009B9D3A /* YJDealTopMenuButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

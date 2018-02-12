@@ -6,11 +6,10 @@
 //  Copyright © 2018年 朱亚杰. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "YJDealBottomModel.h"
 
-@interface YJGDistrict : NSObject
+@interface YJGDistrict : YJDealBottomModel
 
-@property (nonatomic, copy) NSString *name;
 @property (nonatomic, strong) NSArray *neighborhoods;
 
 @end

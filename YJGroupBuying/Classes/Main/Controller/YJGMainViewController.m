@@ -12,6 +12,7 @@
 #import "DealViewController.h"
 #import "MapViewController.h"
 #import "ProfileViewController.h"
+#import "YJNavigationController.h"
 
 @interface YJGMainViewController () <YJGDockDelegate>
 
@@ -61,7 +62,7 @@
 
 - (void)addChildVc:(UIViewController *)childVc {
     
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:childVc];
+    YJNavigationController *nav = [[YJNavigationController alloc] initWithRootViewController:childVc];
     [self addChildViewController:nav];
 }
 
