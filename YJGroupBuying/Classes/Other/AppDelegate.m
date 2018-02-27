@@ -21,10 +21,6 @@
     YJGMainViewController *mainVC = [[YJGMainViewController alloc] init];
     self.window.rootViewController = mainVC;
     
-    self.window.backgroundColor = [UIColor whiteColor];
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeContactAdd];
-    [self.window addSubview:button];
-    
     [self.window makeKeyAndVisible];
     
     return YES;

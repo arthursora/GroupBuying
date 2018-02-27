@@ -38,14 +38,30 @@
     
     _deal = deal;
     
-    _badgeView.image = [UIImage imageNamed:@"ic_deal_new"];
+    NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
+    fmt.dateFormat = @"yyyy-MM-dd";
+    NSString *nowDate = [fmt stringFromDate:[NSDate date]];
+    if ([nowDate isEqualToString:_deal.publishDate]) {
+        _badgeView.image  = [UIImage imageNamed:@"ic_deal_new"];
+        _badgeView.hidden = NO;
+    }else if([nowDate compare:_deal.purchaseDeadline] == NSOrderedDescending){
+        _badgeView.image  = [UIImage imageNamed:@"ic_deal_over"];
+        _badgeView.hidden = NO;
+    }else if([nowDate isEqualToString:_deal.purchaseDeadline]){
+        _badgeView.image  = [UIImage imageNamed:@"ic_deal_soonOver"];
+        _badgeView.hidden = NO;
+    }else {
+        _badgeView.hidden = YES;
+    }
+    
+    
     [_iconView sd_setImageWithURL:[NSURL URLWithString:deal.sImageUrl]];
     
     _iconView.contentMode = UIViewContentModeScaleToFill;
     _titleView.text = deal.title;
     
     [_buyCountButton setTitle:[NSString stringWithFormat:@"%ld", deal.purchaseCount] forState:UIControlStateNormal];
-    _priceLabel.text = [NSString stringWithFormat:@"%.2f元", deal.currentPrice];
+    _priceLabel.text = [NSString stringWithFormat:@"%@元", deal.currentPrice];
 }
 
 - (void)awakeFromNib {

@@ -16,8 +16,8 @@
 
 @property (nonatomic, copy) NSString *desc;
 
-@property (nonatomic, assign) CGFloat listPrice;        //   原价
-@property (nonatomic, assign) CGFloat currentPrice;     //   团购价格
+@property (nonatomic, copy) NSString *listPrice;        //   原价
+@property (nonatomic, copy) NSString *currentPrice;     //   团购价格
 
 @property (nonatomic, assign)NSInteger purchaseCount;
 
@@ -27,5 +27,8 @@
 @property (nonatomic, copy) NSString *publishDate;     //  团购发布上线日期
 @property (nonatomic, copy) NSString *purchaseDeadline;    //  团购单的截止购买日期
 
+@property (nonatomic, copy) NSString *dealUrl;
+
+@property (nonatomic, copy) NSString *deal_h5_url;
 
 @end

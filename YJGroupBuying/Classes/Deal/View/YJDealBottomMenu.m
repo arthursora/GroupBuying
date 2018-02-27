@@ -76,6 +76,11 @@
     if (bottomModel.children.count) {
         
         if (button == _selectedButton) return;
+        
+        _selectedButton.selected = NO;
+        button.selected = YES;
+        _selectedButton = button;
+        
         [self addSecondButton:bottomModel];
     }else {
         
@@ -92,11 +97,11 @@
         CGRect bottomF = self.frame;
         bottomF.size.height = kButtonH;
         self.frame = bottomF;
+        
+        _selectedButton.selected = NO;
+        button.selected = YES;
+        _selectedButton = button;
     }
-    
-    _selectedButton.selected = NO;
-    button.selected = YES;
-    _selectedButton = button;
 }
 
 - (void)addSecondButton:(YJDealBottomModel *)bottomModel {

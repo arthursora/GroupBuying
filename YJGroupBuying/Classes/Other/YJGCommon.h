@@ -13,6 +13,8 @@
 #define YJGDockButtonW 100
 #define YJGDockButtonH 80
 
+#define YJGDetailViewWidth 600
+
 //导航和状态栏高度
 #define NAVIGATION_ADD_STATUSBAR_HEIGHT 64
 

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="YJDetailDock">
+            <rect key="frame" x="0.0" y="0.0" width="45" height="425"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Uu-Zm-seP">
+                    <rect key="frame" x="0.0" y="0.0" width="45" height="165"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" backgroundImage="btn_dealinfo"/>
+                    <state key="disabled" backgroundImage="btn_dealinfo_pressed"/>
+                    <connections>
+                        <action selector="dockClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="p01-rw-pkt"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LHg-r1-176">
+                    <rect key="frame" x="0.0" y="130" width="45" height="165"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" backgroundImage="btn_dealweb"/>
+                    <state key="disabled" backgroundImage="btn_dealweb_pressed"/>
+                    <connections>
+                        <action selector="dockClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="JSm-SG-HZ3"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tpB-lo-cXT">
+                    <rect key="frame" x="0.0" y="260" width="45" height="165"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" backgroundImage="btn_merchant"/>
+                    <state key="disabled" backgroundImage="btn_merchant_pressed"/>
+                    <connections>
+                        <action selector="dockClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="c6c-EM-Uuy"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="imgBtn" destination="LHg-r1-176" id="fhQ-QS-7H3"/>
+                <outlet property="infoBtn" destination="0Uu-Zm-seP" id="d3c-kL-ZUP"/>
+            </connections>
+            <point key="canvasLocation" x="-291.5" y="-129.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn_dealinfo" width="45" height="165"/>
+        <image name="btn_dealinfo_pressed" width="45" height="165"/>
+        <image name="btn_dealweb" width="45" height="165"/>
+        <image name="btn_dealweb_pressed" width="45" height="165"/>
+        <image name="btn_merchant" width="45" height="165"/>
+        <image name="btn_merchant_pressed" width="45" height="165"/>
+    </resources>
+</document>

@@ -56,6 +56,17 @@
 		95A27EDB202D998A007E544E /* YJOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A27EDA202D998A007E544E /* YJOrder.m */; };
 		95A27EDE202D9C4C007E544E /* YJDealBottomMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A27EDD202D9C4C007E544E /* YJDealBottomMenu.m */; };
 		95A27EE1202D9C69007E544E /* YJDealBottomMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A27EE0202D9C69007E544E /* YJDealBottomMenuButton.m */; };
+		95C55E2620411B01008D8893 /* YJCover.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C55E2520411B01008D8893 /* YJCover.m */; };
+		95C55E292041447E008D8893 /* DealDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C55E282041447E008D8893 /* DealDetailViewController.m */; };
+		95C55E2C204145F5008D8893 /* UIBarButtonItem+IW.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C55E2A204145F4008D8893 /* UIBarButtonItem+IW.m */; };
+		95C55E2F20414AAF008D8893 /* YJBuyDock.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C55E2E20414AAF008D8893 /* YJBuyDock.m */; };
+		95C55E3120414AC7008D8893 /* YJBuyDock.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95C55E3020414AC7008D8893 /* YJBuyDock.xib */; };
+		95C55E3420414CC2008D8893 /* YJCenterLineLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C55E3320414CC2008D8893 /* YJCenterLineLabel.m */; };
+		95C55E3720415960008D8893 /* YJDetailDock.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C55E3620415960008D8893 /* YJDetailDock.m */; };
+		95C55E3920415970008D8893 /* YJDetailDock.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95C55E3820415970008D8893 /* YJDetailDock.xib */; };
+		95CEB4AE2043B3A1005AC8D2 /* DealPicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95CEB4AD2043B3A1005AC8D2 /* DealPicViewController.m */; };
+		95CEB4B12043B3AD005AC8D2 /* DealInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95CEB4B02043B3AD005AC8D2 /* DealInfoViewController.m */; };
+		95CEB4B72043B3DE005AC8D2 /* DealMerchatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95CEB4B62043B3DE005AC8D2 /* DealMerchatViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -174,6 +185,26 @@
 		95A27EDD202D9C4C007E544E /* YJDealBottomMenu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJDealBottomMenu.m; sourceTree = "<group>"; };
 		95A27EDF202D9C69007E544E /* YJDealBottomMenuButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJDealBottomMenuButton.h; sourceTree = "<group>"; };
 		95A27EE0202D9C69007E544E /* YJDealBottomMenuButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJDealBottomMenuButton.m; sourceTree = "<group>"; };
+		95C55E2420411B01008D8893 /* YJCover.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJCover.h; sourceTree = "<group>"; };
+		95C55E2520411B01008D8893 /* YJCover.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJCover.m; sourceTree = "<group>"; };
+		95C55E272041447E008D8893 /* DealDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DealDetailViewController.h; sourceTree = "<group>"; };
+		95C55E282041447E008D8893 /* DealDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DealDetailViewController.m; sourceTree = "<group>"; };
+		95C55E2A204145F4008D8893 /* UIBarButtonItem+IW.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+IW.m"; sourceTree = "<group>"; };
+		95C55E2B204145F5008D8893 /* UIBarButtonItem+IW.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+IW.h"; sourceTree = "<group>"; };
+		95C55E2D20414AAF008D8893 /* YJBuyDock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJBuyDock.h; sourceTree = "<group>"; };
+		95C55E2E20414AAF008D8893 /* YJBuyDock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJBuyDock.m; sourceTree = "<group>"; };
+		95C55E3020414AC7008D8893 /* YJBuyDock.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YJBuyDock.xib; sourceTree = "<group>"; };
+		95C55E3220414CC2008D8893 /* YJCenterLineLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJCenterLineLabel.h; sourceTree = "<group>"; };
+		95C55E3320414CC2008D8893 /* YJCenterLineLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJCenterLineLabel.m; sourceTree = "<group>"; };
+		95C55E3520415960008D8893 /* YJDetailDock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJDetailDock.h; sourceTree = "<group>"; };
+		95C55E3620415960008D8893 /* YJDetailDock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJDetailDock.m; sourceTree = "<group>"; };
+		95C55E3820415970008D8893 /* YJDetailDock.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YJDetailDock.xib; sourceTree = "<group>"; };
+		95CEB4AC2043B3A1005AC8D2 /* DealPicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DealPicViewController.h; sourceTree = "<group>"; };
+		95CEB4AD2043B3A1005AC8D2 /* DealPicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DealPicViewController.m; sourceTree = "<group>"; };
+		95CEB4AF2043B3AD005AC8D2 /* DealInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DealInfoViewController.h; sourceTree = "<group>"; };
+		95CEB4B02043B3AD005AC8D2 /* DealInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DealInfoViewController.m; sourceTree = "<group>"; };
+		95CEB4B52043B3DE005AC8D2 /* DealMerchatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DealMerchatViewController.h; sourceTree = "<group>"; };
+		95CEB4B62043B3DE005AC8D2 /* DealMerchatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DealMerchatViewController.m; sourceTree = "<group>"; };
 		CAF135FFEE83705E0CD38307 /* Pods-YJGroupBuying.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YJGroupBuying.release.xcconfig"; path = "Pods/Target Support Files/Pods-YJGroupBuying/Pods-YJGroupBuying.release.xcconfig"; sourceTree = "<group>"; };
 		E7D80948DE1485FBF237D4E5 /* libPods-YJGroupBuying.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YJGroupBuying.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -364,6 +395,14 @@
 			children = (
 				957B97852023452900B68C58 /* DealViewController.h */,
 				957B97862023452900B68C58 /* DealViewController.m */,
+				95C55E272041447E008D8893 /* DealDetailViewController.h */,
+				95C55E282041447E008D8893 /* DealDetailViewController.m */,
+				95CEB4AC2043B3A1005AC8D2 /* DealPicViewController.h */,
+				95CEB4AD2043B3A1005AC8D2 /* DealPicViewController.m */,
+				95CEB4AF2043B3AD005AC8D2 /* DealInfoViewController.h */,
+				95CEB4B02043B3AD005AC8D2 /* DealInfoViewController.m */,
+				95CEB4B52043B3DE005AC8D2 /* DealMerchatViewController.h */,
+				95CEB4B62043B3DE005AC8D2 /* DealMerchatViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -455,6 +494,16 @@
 		9598EF8F202BE4F4009B9D3A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				95C55E3520415960008D8893 /* YJDetailDock.h */,
+				95C55E3620415960008D8893 /* YJDetailDock.m */,
+				95C55E3820415970008D8893 /* YJDetailDock.xib */,
+				95C55E2D20414AAF008D8893 /* YJBuyDock.h */,
+				95C55E2E20414AAF008D8893 /* YJBuyDock.m */,
+				95C55E3020414AC7008D8893 /* YJBuyDock.xib */,
+				95C55E3220414CC2008D8893 /* YJCenterLineLabel.h */,
+				95C55E3320414CC2008D8893 /* YJCenterLineLabel.m */,
+				95C55E2420411B01008D8893 /* YJCover.h */,
+				95C55E2520411B01008D8893 /* YJCover.m */,
 				9598EF98202BE5D5009B9D3A /* YJDealCell.h */,
 				9598EF99202BE5D5009B9D3A /* YJDealCell.m */,
 				9598EF9A202BE5D5009B9D3A /* YJDealCell.xib */,
@@ -475,6 +524,8 @@
 		9598EFA6202C41CB009B9D3A /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				95C55E2B204145F5008D8893 /* UIBarButtonItem+IW.h */,
+				95C55E2A204145F4008D8893 /* UIBarButtonItem+IW.m */,
 				95A27EC9202D4F5E007E544E /* UIImage+IW.h */,
 				95A27ECA202D4F5E007E544E /* UIImage+IW.m */,
 				9598EFA7202C41CB009B9D3A /* MBProgressHUD+DST.h */,
@@ -658,7 +709,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95C55E3920415970008D8893 /* YJDetailDock.xib in Resources */,
 				9598EF9C202BE5D5009B9D3A /* YJDealCell.xib in Resources */,
+				95C55E3120414AC7008D8893 /* YJBuyDock.xib in Resources */,
 				957661EC2021BAA3007C7757 /* LaunchScreen.storyboard in Resources */,
 				957661E92021BAA3007C7757 /* Assets.xcassets in Resources */,
 				95A27ECE202D84E3007E544E /* Categories.plist in Resources */,
@@ -742,6 +795,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95C55E3720415960008D8893 /* YJDetailDock.m in Sources */,
 				95A090C3202B20D800F1373D /* DPAPI.m in Sources */,
 				957B97672022C5BB00B68C58 /* YJGMainViewController.m in Sources */,
 				95A27EDB202D998A007E544E /* YJOrder.m in Sources */,
@@ -752,16 +806,21 @@
 				95A090CA202B26BA00F1373D /* YJDeal.m in Sources */,
 				957B97872023452900B68C58 /* DealViewController.m in Sources */,
 				9598EFB9202C4EDC009B9D3A /* YJCityTool.m in Sources */,
+				95C55E2F20414AAF008D8893 /* YJBuyDock.m in Sources */,
 				95A27ED5202D9944007E544E /* YJDealBottomModel.m in Sources */,
 				959540BB202449C300B2A2AD /* YJGGroup.m in Sources */,
 				95A090C2202B20D800F1373D /* DPRequest.m in Sources */,
 				95A27EC8202D4ECE007E544E /* YJNavigationController.m in Sources */,
 				9598EFA5202C23B4009B9D3A /* YJDealParam.m in Sources */,
+				95CEB4B12043B3AD005AC8D2 /* DealInfoViewController.m in Sources */,
 				95A27EE1202D9C69007E544E /* YJDealBottomMenuButton.m in Sources */,
+				95C55E3420414CC2008D8893 /* YJCenterLineLabel.m in Sources */,
 				9598EFBC202C7419009B9D3A /* YJDealTopMunu.m in Sources */,
 				95A27ED2202D97AE007E544E /* YJCategoryTool.m in Sources */,
 				959540BF202449E200B2A2AD /* YJGCityListViewController.m in Sources */,
+				95C55E292041447E008D8893 /* DealDetailViewController.m in Sources */,
 				957B97762023145000B68C58 /* YJGLocationButton.m in Sources */,
+				95C55E2620411B01008D8893 /* YJCover.m in Sources */,
 				959540BC202449C300B2A2AD /* YJGCity.m in Sources */,
 				957B976D2023140000B68C58 /* YJGDockButton.m in Sources */,
 				957661EF2021BAA3007C7757 /* main.m in Sources */,
@@ -769,8 +828,11 @@
 				95200A0B2030345500940BF7 /* YJDealBottomSecMenuButton.m in Sources */,
 				959540BA202449C300B2A2AD /* YJGDistrict.m in Sources */,
 				957B97732023144500B68C58 /* YJGTabButton.m in Sources */,
+				95CEB4B72043B3DE005AC8D2 /* DealMerchatViewController.m in Sources */,
 				957B97642022C58900B68C58 /* AppDelegate.m in Sources */,
 				957B97792023148000B68C58 /* YJGDock.m in Sources */,
+				95C55E2C204145F5008D8893 /* UIBarButtonItem+IW.m in Sources */,
+				95CEB4AE2043B3A1005AC8D2 /* DealPicViewController.m in Sources */,
 				957B97842023451E00B68C58 /* CollectionViewController.m in Sources */,
 				9598EFB4202C4288009B9D3A /* YJHttpTool.m in Sources */,
 				959540C32024646400B2A2AD /* SearchCityViewController.m in Sources */,

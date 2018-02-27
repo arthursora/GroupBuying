@@ -17,6 +17,8 @@
 #import "YJGDistrict.h"
 #import "YJCategory.h"
 #import "YJOrder.h"
+#import "YJCover.h"
+#import "DealDetailViewController.h"
 
 @interface DealViewController ()
 {
@@ -54,6 +56,11 @@
     [self loadMore];
 }
 
+- (void)dealloc {
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (void)menuBtnSelected:(NSNotification *)note {
     
     NSString *title = [note object][YJMenuBtnTitleKey];
@@ -83,7 +90,7 @@
 #pragma mark - viewDidLoad
 - (void)setupUI {
     
-    self.edgesForExtendedLayout = UIRectEdgeNone;
+//    self.edgesForExtendedLayout = UIRectEdgeNone;
     
     self.collectionView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_deal"]];
     
@@ -95,11 +102,6 @@
     YJDealTopMunu *topMenu = [[YJDealTopMunu alloc] init];
     topMenu.contentView = self.view;
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:topMenu];
-}
-
-- (void)dealloc {
-    
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)cityChanged:(NSNotification *)note {
@@ -195,6 +197,36 @@
     YJDealCell *cell = [YJDealCell cellWithCollectionView:collectionView indexPath:indexPath];
     cell.deal = _deals[indexPath.row];
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [YJCover showCoverInView:self.navigationController.view frame:self.navigationController.view.bounds target:self action:@selector(coverDismiss)];
+    
+    DealDetailViewController *detailVC = [[DealDetailViewController alloc] init];
+    detailVC.deal = _deals[indexPath.item];
+    detailVC.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"btn_nav_close" higlightedImage:@"btn_nav_close_hl" target:self action:@selector(coverDismiss)];
+    
+    YJNavigationController *nav = [[YJNavigationController alloc] initWithRootViewController:detailVC];
+    nav.view.backgroundColor = GlobalBGColor;
+    CGFloat navW = YJGDetailViewWidth;
+    CGFloat navH = self.navigationController.view.frame.size.height;
+    CGFloat navX = self.navigationController.view.frame.size.width - YJGDetailViewWidth;
+    
+    nav.view.frame = CGRectMake(navX, 0, navW, navH);
+    nav.view.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleHeight;
+    
+    [self.navigationController addChildViewController:nav];
+    [self.navigationController.view addSubview:nav.view];
+}
+
+- (void)coverDismiss {
+    
+    [YJCover hideCoverInView:self.navigationController.view];
+    
+    UINavigationController *nav = [self.navigationController.childViewControllers lastObject];
+    [nav.view removeFromSuperview];
+    [nav removeFromParentViewController];
 }
 
 - (void)didReceiveMemoryWarning {

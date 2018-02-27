@@ -13,6 +13,7 @@
 #import "YJDealTopMenuButton.h"
 #import "YJDealBottomMenu.h"
 #import "YJCategoryTool.h"
+#import "YJCover.h"
 
 @interface YJDealTopMunu()
 {
@@ -25,7 +26,7 @@
     YJDealBottomMenu *_oBottomMenu;
 }
 
-@property (nonatomic, weak) UIView *maskView;
+@property (nonatomic, weak) YJCover *maskView;
 
 @end
 
@@ -78,22 +79,13 @@
     
     if (_selectedButton == button) {
         
-        [self maskView];
+        [self maskDismiss];
         
     }else {
         
         if (!_selectedButton) {
             
-            UIView *maskView = [[UIView alloc] initWithFrame:_contentView.bounds];
-            maskView.backgroundColor = [UIColor blackColor];
-            maskView.alpha = 0.5;
-            maskView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-            [_contentView addSubview:maskView];
-            _maskView = maskView;
-            
-            maskView.userInteractionEnabled = YES;
-            UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(maskDismiss)];
-            [maskView addGestureRecognizer:tapGesture];
+            _maskView = [YJCover showCoverInView:_contentView frame:_contentView.bounds target:self action:@selector(maskDismiss)];
         }
         
         _selectedButton.selected = NO;
@@ -140,6 +132,9 @@
         }
             break;
     }
+    
+    _selectBottomMenu.mj_w = _maskView.frame.size.width;
+    
     [_contentView addSubview:_selectBottomMenu];
 }
 
