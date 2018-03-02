@@ -8,12 +8,23 @@
 
 #import <Foundation/Foundation.h>
 #import "YJHttpTool.h"
-@class YJDealsResult, YJDealParam;
+@class YJDealsResult, YJDealParam, YJDeal;
 
 typedef void(^YJDealsSuccess)(YJDealsResult *result);
+
+typedef void(^YJDealInfoSuccess)(YJDeal *result);
 
 @interface YJDealTool : NSObject
 
 + (void)dealsWithParam:(YJDealParam *)param success:(YJDealsSuccess)success failure:(YJHttpFailure)failure;
+
++ (void)dealInfoWithId:(NSString *)dealId success:(YJDealInfoSuccess)success failure:(YJHttpFailure)failure;
+
++ (NSArray *)collectionDeals;
+
++ (BOOL)isCollected:(YJDeal *)deal;
+
++ (void)collect:(YJDeal *)deal;
++ (void)uncollect:(YJDeal *)deal;
 
 @end

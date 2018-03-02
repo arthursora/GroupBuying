@@ -7,8 +7,14 @@
 //
 
 #import "DealInfoViewController.h"
+#import "YJDealTool.h"
+#import "YJDeal.h"
+#import "YJDealInfoHeader.h"
+#import "DealInfoTextView.h"
 
 @interface DealInfoViewController ()
+
+@property (nonatomic, weak) UIScrollView *scrollView;
 
 @end
 
@@ -16,7 +22,64 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self setupUI];
+    [self setupData];
+}
+
+#pragma mark - viewDidLoad
+- (void)setupUI {
+    
+    CGFloat scrollW = 430;
+    CGFloat scrollX = (YJGDetailViewWidth - 60 - scrollW) / 2;
+    CGFloat scrollH = self.view.mj_h;
+    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(scrollX, 0, scrollW, scrollH)];
+    scrollView.backgroundColor = GlobalBGColor;
+    scrollView.bounces = YES;
+    scrollView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
+    scrollView.showsVerticalScrollIndicator = NO;
+    [self.view addSubview:scrollView];
+    _scrollView = scrollView;
+}
+
+- (void)setupData {
+    
+    [YJDealTool dealInfoWithId:_deal.dealId success:^(YJDeal *result) {
+        
+        _deal = result;
+        [self setupDealInfo];
+        
+    } failure:^(NSError *error) {
+        [MBProgressHUD showError:error.localizedDescription];
+    }];
+}
+
+- (void)setupDealInfo {
+    
+    YJDealInfoHeader *infoHeader = [YJDealInfoHeader header];
+    infoHeader.mj_y = 140;
+    infoHeader.deal = _deal;
+    [_scrollView addSubview:infoHeader];
+    
+    _scrollView.contentSize = CGSizeMake(0, CGRectGetMaxY(infoHeader.frame) + 10);
+    
+    [self addTextView:@"ic_content" title:@"团购详情" content:_deal.details];
+    [self addTextView:@"ic_content" title:@"购买须知" content:_deal.restrictions.special_tips];
+    [self addTextView:@"ic_tip" title:@"重要通知" content:_deal.notice];
+}
+
+- (void)addTextView:(NSString *)icon title:(NSString *)title content:(NSString *)content {
+    
+    if (content.length == 0) return;
+    
+    DealInfoTextView *textView = [DealInfoTextView textView];
+    textView.icon = icon;
+    textView.title = title;
+    textView.detail = content;
+    [_scrollView addSubview:textView];
+    
+    textView.mj_y = _scrollView.contentSize.height;
+    _scrollView.contentSize = CGSizeMake(0, CGRectGetMaxY(textView.frame) + 10);;
 }
 
 - (void)didReceiveMemoryWarning {

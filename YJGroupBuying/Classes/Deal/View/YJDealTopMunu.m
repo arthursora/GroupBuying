@@ -85,7 +85,9 @@
         
         if (!_selectedButton) {
             
-            _maskView = [YJCover showCoverInView:_contentView frame:_contentView.bounds target:self action:@selector(maskDismiss)];
+            CGRect frame = _contentView.bounds;
+            frame.origin.y = NAVIGATION_ADD_STATUSBAR_HEIGHT;
+            _maskView = [YJCover showCoverInView:_contentView frame:frame target:self action:@selector(maskDismiss)];
         }
         
         _selectedButton.selected = NO;
@@ -133,6 +135,7 @@
             break;
     }
     
+    _selectBottomMenu.mj_y = NAVIGATION_ADD_STATUSBAR_HEIGHT;
     _selectBottomMenu.mj_w = _maskView.frame.size.width;
     
     [_contentView addSubview:_selectBottomMenu];

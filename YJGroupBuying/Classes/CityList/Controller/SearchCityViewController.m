@@ -54,9 +54,6 @@
     
     YJGCity *city = _searchCities[indexPath.row];
     [YJCityTool addRecentCity:city];
-    
-    NSDictionary *info = @{@"city":city};
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"cityChanged" object:info];
 }
 
 

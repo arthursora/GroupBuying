@@ -20,16 +20,22 @@
 
 @implementation YJDealCell
 
+static NSMutableArray *_collectionViews;
+
++ (void)initialize {
+    _collectionViews = [NSMutableArray array];
+}
+
 + (instancetype)cellWithCollectionView:(UICollectionView *)collectionView indexPath:(NSIndexPath *)indexPath {
     
     static NSString *ID = @"deal";
     
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
+    if (![_collectionViews containsObject:collectionView]) {
         
         UINib *nib = [UINib nibWithNibName:@"YJDealCell" bundle:nil];
         [collectionView registerNib:nib forCellWithReuseIdentifier:ID];
-    });
+        [_collectionViews addObject:collectionView];
+    }
     
     return [collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexPath];
 }

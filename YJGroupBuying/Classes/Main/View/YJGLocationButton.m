@@ -9,10 +9,14 @@
 #import "YJGLocationButton.h"
 #import "YJGCityListViewController.h"
 #import "YJGCity.h"
+#import <CoreLocation/CoreLocation.h>
+#import "YJCityTool.h"
 
-@interface YJGLocationButton() <UIPopoverControllerDelegate>
+@interface YJGLocationButton() <UIPopoverControllerDelegate, CLLocationManagerDelegate>
 {
     UIPopoverController *_popover;
+    CLLocationManager *_locationManager;
+    CLGeocoder *_coder;
 }
 
 @end
@@ -37,9 +41,49 @@
         
         [self addTarget:self action:@selector(locClick) forControlEvents:UIControlEventTouchUpInside];
         
+        [self locCurrentCity];
+        
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(cityChanged:) name:@"cityChanged" object:nil];
     }
     return self;
+}
+
+- (void)locCurrentCity {
+    
+    _locationManager = [[CLLocationManager alloc] init];
+    _coder = [[CLGeocoder alloc] init];
+    
+    _locationManager.delegate = self;
+    [_locationManager requestAlwaysAuthorization];
+    [_locationManager requestWhenInUseAuthorization];
+    [_locationManager startUpdatingLocation];
+}
+
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
+    
+    YJLog(@" locationManager %@", locations);
+    [manager stopUpdatingLocation];
+    
+    CLLocation *location = locations[0];
+    
+    [_coder reverseGeocodeLocation:location completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
+        
+        for (CLPlacemark *mark in placemarks) {
+            
+            YJLog(@"%@ %@", mark.locality, mark.subLocality);
+            
+            NSString *cityName = mark.locality;
+            cityName = [cityName stringByReplacingOccurrencesOfString:@"市" withString:@""];
+            YJGCity *city = [YJCityTool cityWithName:cityName];
+            if (city) {
+                
+                [YJCityTool addRecentCity:city];
+            }else {
+                YJLog(@"no such city");
+            }
+        }
+    }];
 }
 
 - (void)cityChanged:(NSNotification *)note {

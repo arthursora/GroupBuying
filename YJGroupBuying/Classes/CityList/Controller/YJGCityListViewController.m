@@ -171,9 +171,6 @@
     YJGCity *city = group.cities[indexPath.row];
     
     [YJCityTool addRecentCity:city];
-    
-    NSDictionary *info = @{@"city":city};
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"cityChanged" object:info];
 }
 
 - (NSArray<NSString *> *)sectionIndexTitlesForTableView:(UITableView *)tableView {

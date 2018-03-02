@@ -42,6 +42,13 @@
 		9598EFB9202C4EDC009B9D3A /* YJCityTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9598EFB8202C4EDC009B9D3A /* YJCityTool.m */; };
 		9598EFBC202C7419009B9D3A /* YJDealTopMunu.m in Sources */ = {isa = PBXBuildFile; fileRef = 9598EFBB202C7419009B9D3A /* YJDealTopMunu.m */; };
 		9598EFBF202C742C009B9D3A /* YJDealTopMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9598EFBE202C742C009B9D3A /* YJDealTopMenuButton.m */; };
+		95990A7220463F7F00219FFB /* YJDealInfoHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 95990A7120463F7F00219FFB /* YJDealInfoHeader.m */; };
+		95990A7420463F9E00219FFB /* YJDealInfoHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95990A7320463F9E00219FFB /* YJDealInfoHeader.xib */; };
+		95990A7620465FC700219FFB /* DealInfoTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95990A7520465FC700219FFB /* DealInfoTextView.xib */; };
+		95990A7920465FD200219FFB /* DealInfoTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 95990A7820465FD200219FFB /* DealInfoTextView.m */; };
+		95990A7C2046843100219FFB /* YJMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95990A7B2046843100219FFB /* YJMoreViewController.m */; };
+		95990ABD2046A31A00219FFB /* BaseDealListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95990ABC2046A31A00219FFB /* BaseDealListViewController.m */; };
+		959E02F2204556C6003E2B1D /* Restriction.m in Sources */ = {isa = PBXBuildFile; fileRef = 959E02F1204556C6003E2B1D /* Restriction.m */; };
 		95A090C2202B20D800F1373D /* DPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A090BE202B20D800F1373D /* DPRequest.m */; };
 		95A090C3202B20D800F1373D /* DPAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A090BF202B20D800F1373D /* DPAPI.m */; };
 		95A090C7202B245E00F1373D /* YJDealsResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A090C6202B245E00F1373D /* YJDealsResult.m */; };
@@ -56,6 +63,9 @@
 		95A27EDB202D998A007E544E /* YJOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A27EDA202D998A007E544E /* YJOrder.m */; };
 		95A27EDE202D9C4C007E544E /* YJDealBottomMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A27EDD202D9C4C007E544E /* YJDealBottomMenu.m */; };
 		95A27EE1202D9C69007E544E /* YJDealBottomMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A27EE0202D9C69007E544E /* YJDealBottomMenuButton.m */; };
+		95BF7F462047A78E00226B12 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95BF7F452047A78E00226B12 /* CoreLocation.framework */; };
+		95BF7F492047C7C200226B12 /* YJBusiness.m in Sources */ = {isa = PBXBuildFile; fileRef = 95BF7F482047C7C200226B12 /* YJBusiness.m */; };
+		95BF7F4D2047D32B00226B12 /* YJDealAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 95BF7F4C2047D32B00226B12 /* YJDealAnnotation.m */; };
 		95C55E2620411B01008D8893 /* YJCover.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C55E2520411B01008D8893 /* YJCover.m */; };
 		95C55E292041447E008D8893 /* DealDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C55E282041447E008D8893 /* DealDetailViewController.m */; };
 		95C55E2C204145F5008D8893 /* UIBarButtonItem+IW.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C55E2A204145F4008D8893 /* UIBarButtonItem+IW.m */; };
@@ -158,6 +168,18 @@
 		9598EFBB202C7419009B9D3A /* YJDealTopMunu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJDealTopMunu.m; sourceTree = "<group>"; };
 		9598EFBD202C742C009B9D3A /* YJDealTopMenuButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJDealTopMenuButton.h; sourceTree = "<group>"; };
 		9598EFBE202C742C009B9D3A /* YJDealTopMenuButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJDealTopMenuButton.m; sourceTree = "<group>"; };
+		95990A7020463F7F00219FFB /* YJDealInfoHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJDealInfoHeader.h; sourceTree = "<group>"; };
+		95990A7120463F7F00219FFB /* YJDealInfoHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJDealInfoHeader.m; sourceTree = "<group>"; };
+		95990A7320463F9E00219FFB /* YJDealInfoHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YJDealInfoHeader.xib; sourceTree = "<group>"; };
+		95990A7520465FC700219FFB /* DealInfoTextView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DealInfoTextView.xib; sourceTree = "<group>"; };
+		95990A7720465FD200219FFB /* DealInfoTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DealInfoTextView.h; sourceTree = "<group>"; };
+		95990A7820465FD200219FFB /* DealInfoTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DealInfoTextView.m; sourceTree = "<group>"; };
+		95990A7A2046843100219FFB /* YJMoreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJMoreViewController.h; sourceTree = "<group>"; };
+		95990A7B2046843100219FFB /* YJMoreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJMoreViewController.m; sourceTree = "<group>"; };
+		95990ABB2046A31A00219FFB /* BaseDealListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseDealListViewController.h; sourceTree = "<group>"; };
+		95990ABC2046A31A00219FFB /* BaseDealListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseDealListViewController.m; sourceTree = "<group>"; };
+		959E02F0204556C6003E2B1D /* Restriction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Restriction.h; sourceTree = "<group>"; };
+		959E02F1204556C6003E2B1D /* Restriction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Restriction.m; sourceTree = "<group>"; };
 		95A090BD202B20D800F1373D /* DPAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPAPI.h; sourceTree = "<group>"; };
 		95A090BE202B20D800F1373D /* DPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPRequest.m; sourceTree = "<group>"; };
 		95A090BF202B20D800F1373D /* DPAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPAPI.m; sourceTree = "<group>"; };
@@ -185,6 +207,11 @@
 		95A27EDD202D9C4C007E544E /* YJDealBottomMenu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJDealBottomMenu.m; sourceTree = "<group>"; };
 		95A27EDF202D9C69007E544E /* YJDealBottomMenuButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJDealBottomMenuButton.h; sourceTree = "<group>"; };
 		95A27EE0202D9C69007E544E /* YJDealBottomMenuButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJDealBottomMenuButton.m; sourceTree = "<group>"; };
+		95BF7F452047A78E00226B12 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		95BF7F472047C7C200226B12 /* YJBusiness.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJBusiness.h; sourceTree = "<group>"; };
+		95BF7F482047C7C200226B12 /* YJBusiness.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJBusiness.m; sourceTree = "<group>"; };
+		95BF7F4B2047D32B00226B12 /* YJDealAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJDealAnnotation.h; sourceTree = "<group>"; };
+		95BF7F4C2047D32B00226B12 /* YJDealAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJDealAnnotation.m; sourceTree = "<group>"; };
 		95C55E2420411B01008D8893 /* YJCover.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJCover.h; sourceTree = "<group>"; };
 		95C55E2520411B01008D8893 /* YJCover.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJCover.m; sourceTree = "<group>"; };
 		95C55E272041447E008D8893 /* DealDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DealDetailViewController.h; sourceTree = "<group>"; };
@@ -214,6 +241,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95BF7F462047A78E00226B12 /* CoreLocation.framework in Frameworks */,
 				575A5C3BD185118F67B96B00 /* libPods-YJGroupBuying.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,6 +370,10 @@
 				957B97662022C5BB00B68C58 /* YJGMainViewController.m */,
 				95A27EC6202D4ECE007E544E /* YJNavigationController.h */,
 				95A27EC7202D4ECE007E544E /* YJNavigationController.m */,
+				95990A7A2046843100219FFB /* YJMoreViewController.h */,
+				95990A7B2046843100219FFB /* YJMoreViewController.m */,
+				95990ABB2046A31A00219FFB /* BaseDealListViewController.h */,
+				95990ABC2046A31A00219FFB /* BaseDealListViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -397,10 +429,10 @@
 				957B97862023452900B68C58 /* DealViewController.m */,
 				95C55E272041447E008D8893 /* DealDetailViewController.h */,
 				95C55E282041447E008D8893 /* DealDetailViewController.m */,
-				95CEB4AC2043B3A1005AC8D2 /* DealPicViewController.h */,
-				95CEB4AD2043B3A1005AC8D2 /* DealPicViewController.m */,
 				95CEB4AF2043B3AD005AC8D2 /* DealInfoViewController.h */,
 				95CEB4B02043B3AD005AC8D2 /* DealInfoViewController.m */,
+				95CEB4AC2043B3A1005AC8D2 /* DealPicViewController.h */,
+				95CEB4AD2043B3A1005AC8D2 /* DealPicViewController.m */,
 				95CEB4B52043B3DE005AC8D2 /* DealMerchatViewController.h */,
 				95CEB4B62043B3DE005AC8D2 /* DealMerchatViewController.m */,
 			);
@@ -410,6 +442,7 @@
 		957B977E2023450C00B68C58 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				95BF7F4A2047D31800226B12 /* Model */,
 				957B977F2023450C00B68C58 /* Controller */,
 			);
 			path = Map;
@@ -494,6 +527,12 @@
 		9598EF8F202BE4F4009B9D3A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				95990A7720465FD200219FFB /* DealInfoTextView.h */,
+				95990A7820465FD200219FFB /* DealInfoTextView.m */,
+				95990A7520465FC700219FFB /* DealInfoTextView.xib */,
+				95990A7020463F7F00219FFB /* YJDealInfoHeader.h */,
+				95990A7120463F7F00219FFB /* YJDealInfoHeader.m */,
+				95990A7320463F9E00219FFB /* YJDealInfoHeader.xib */,
 				95C55E3520415960008D8893 /* YJDetailDock.h */,
 				95C55E3620415960008D8893 /* YJDetailDock.m */,
 				95C55E3820415970008D8893 /* YJDetailDock.xib */,
@@ -572,6 +611,10 @@
 				95A090C6202B245E00F1373D /* YJDealsResult.m */,
 				95A090C8202B26BA00F1373D /* YJDeal.h */,
 				95A090C9202B26BA00F1373D /* YJDeal.m */,
+				95BF7F472047C7C200226B12 /* YJBusiness.h */,
+				95BF7F482047C7C200226B12 /* YJBusiness.m */,
+				959E02F0204556C6003E2B1D /* Restriction.h */,
+				959E02F1204556C6003E2B1D /* Restriction.m */,
 				9598EFA3202C23B4009B9D3A /* YJDealParam.h */,
 				9598EFA4202C23B4009B9D3A /* YJDealParam.m */,
 				95A27ED3202D9944007E544E /* YJDealBottomModel.h */,
@@ -592,9 +635,19 @@
 			path = Lib;
 			sourceTree = "<group>";
 		};
+		95BF7F4A2047D31800226B12 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				95BF7F4B2047D32B00226B12 /* YJDealAnnotation.h */,
+				95BF7F4C2047D32B00226B12 /* YJDealAnnotation.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		A902DC31DA86B0C3EFB55330 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				95BF7F452047A78E00226B12 /* CoreLocation.framework */,
 				E7D80948DE1485FBF237D4E5 /* libPods-YJGroupBuying.a */,
 			);
 			name = Frameworks;
@@ -714,7 +767,9 @@
 				95C55E3120414AC7008D8893 /* YJBuyDock.xib in Resources */,
 				957661EC2021BAA3007C7757 /* LaunchScreen.storyboard in Resources */,
 				957661E92021BAA3007C7757 /* Assets.xcassets in Resources */,
+				95990A7420463F9E00219FFB /* YJDealInfoHeader.xib in Resources */,
 				95A27ECE202D84E3007E544E /* Categories.plist in Resources */,
+				95990A7620465FC700219FFB /* DealInfoTextView.xib in Resources */,
 				959540A62024456800B2A2AD /* Cities.plist in Resources */,
 				95A27ECF202D84E3007E544E /* Orders.plist in Resources */,
 			);
@@ -796,6 +851,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95C55E3720415960008D8893 /* YJDetailDock.m in Sources */,
+				95BF7F4D2047D32B00226B12 /* YJDealAnnotation.m in Sources */,
 				95A090C3202B20D800F1373D /* DPAPI.m in Sources */,
 				957B97672022C5BB00B68C58 /* YJGMainViewController.m in Sources */,
 				95A27EDB202D998A007E544E /* YJOrder.m in Sources */,
@@ -805,12 +861,14 @@
 				957B97702023143700B68C58 /* YJGMoreButton.m in Sources */,
 				95A090CA202B26BA00F1373D /* YJDeal.m in Sources */,
 				957B97872023452900B68C58 /* DealViewController.m in Sources */,
+				95990A7C2046843100219FFB /* YJMoreViewController.m in Sources */,
 				9598EFB9202C4EDC009B9D3A /* YJCityTool.m in Sources */,
 				95C55E2F20414AAF008D8893 /* YJBuyDock.m in Sources */,
 				95A27ED5202D9944007E544E /* YJDealBottomModel.m in Sources */,
 				959540BB202449C300B2A2AD /* YJGGroup.m in Sources */,
 				95A090C2202B20D800F1373D /* DPRequest.m in Sources */,
 				95A27EC8202D4ECE007E544E /* YJNavigationController.m in Sources */,
+				95990ABD2046A31A00219FFB /* BaseDealListViewController.m in Sources */,
 				9598EFA5202C23B4009B9D3A /* YJDealParam.m in Sources */,
 				95CEB4B12043B3AD005AC8D2 /* DealInfoViewController.m in Sources */,
 				95A27EE1202D9C69007E544E /* YJDealBottomMenuButton.m in Sources */,
@@ -828,19 +886,23 @@
 				95200A0B2030345500940BF7 /* YJDealBottomSecMenuButton.m in Sources */,
 				959540BA202449C300B2A2AD /* YJGDistrict.m in Sources */,
 				957B97732023144500B68C58 /* YJGTabButton.m in Sources */,
+				95BF7F492047C7C200226B12 /* YJBusiness.m in Sources */,
 				95CEB4B72043B3DE005AC8D2 /* DealMerchatViewController.m in Sources */,
 				957B97642022C58900B68C58 /* AppDelegate.m in Sources */,
 				957B97792023148000B68C58 /* YJGDock.m in Sources */,
 				95C55E2C204145F5008D8893 /* UIBarButtonItem+IW.m in Sources */,
 				95CEB4AE2043B3A1005AC8D2 /* DealPicViewController.m in Sources */,
+				95990A7220463F7F00219FFB /* YJDealInfoHeader.m in Sources */,
 				957B97842023451E00B68C58 /* CollectionViewController.m in Sources */,
 				9598EFB4202C4288009B9D3A /* YJHttpTool.m in Sources */,
 				959540C32024646400B2A2AD /* SearchCityViewController.m in Sources */,
 				9598EFB3202C4288009B9D3A /* YJLastestCityManager.m in Sources */,
+				95990A7920465FD200219FFB /* DealInfoTextView.m in Sources */,
 				9598EFB5202C4288009B9D3A /* YJTool.m in Sources */,
 				95A27EDE202D9C4C007E544E /* YJDealBottomMenu.m in Sources */,
 				9598EFB6202C4288009B9D3A /* YJDealTool.m in Sources */,
 				95A27ED8202D997C007E544E /* YJCategory.m in Sources */,
+				959E02F2204556C6003E2B1D /* Restriction.m in Sources */,
 				957B978D2023453B00B68C58 /* ProfileViewController.m in Sources */,
 				957B978A2023453000B68C58 /* MapViewController.m in Sources */,
 				9598EFBF202C742C009B9D3A /* YJDealTopMenuButton.m in Sources */,

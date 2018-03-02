@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="YJDealInfoHeader">
+            <rect key="frame" x="0.0" y="0.0" width="430" height="385"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder_deal" translatesAutoresizingMaskIntoConstraints="NO" id="wjD-7c-Yb9">
+                    <rect key="frame" x="25" y="20" width="380" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="380" id="c4y-sO-NnN"/>
+                        <constraint firstAttribute="height" constant="200" id="xSX-Xg-F2L"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Labelasdjifklaslkcdmsklmckasmdkcsadlkmcas" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nK9-TI-LWH">
+                    <rect key="frame" x="10" y="238" width="410" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="HLF-0m-7RV"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="separator_dotline_item" translatesAutoresizingMaskIntoConstraints="NO" id="hy4-6N-THZ">
+                    <rect key="frame" x="0.0" y="296" width="430" height="1"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="mbr-U7-4r9"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g5y-LO-BR3">
+                    <rect key="frame" x="25" y="305" width="159.5" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="0oI-2P-SBx"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <inset key="titleEdgeInsets" minX="17" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="支持“随时退款”" image="ic_yes">
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </state>
+                    <state key="disabled" title="支持“随时退款”" image="ic_no">
+                        <color key="titleColor" red="0.7097254395" green="0.70984917879999998" blue="0.70971763129999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="selected" image="ic_no">
+                        <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
+                    </state>
+                </button>
+                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVF-8h-mcP">
+                    <rect key="frame" x="25" y="345" width="159.5" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <inset key="titleEdgeInsets" minX="17" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="支持“过期退款”" image="ic_yes">
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </state>
+                    <state key="disabled" title="支持“过期退款”" image="ic_no">
+                        <color key="titleColor" red="0.7097254395" green="0.70984917879999998" blue="0.70971763129999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="selected" image="ic_no">
+                        <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
+                    </state>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="separator_refund_item" translatesAutoresizingMaskIntoConstraints="NO" id="Xkb-JF-Vre">
+                    <rect key="frame" x="214.5" y="315" width="1" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1" id="8Qd-75-gTF"/>
+                        <constraint firstAttribute="height" constant="50" id="MHe-hF-Lnz"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4SE-CV-2LG">
+                    <rect key="frame" x="225.5" y="305" width="199.5" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="KEz-wp-qYu"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <inset key="titleEdgeInsets" minX="17" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="12 天 9 小时 23 分钟" image="ic_time">
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </state>
+                    <state key="disabled" image="ic_no">
+                        <color key="titleColor" red="0.7097254395" green="0.70984917879999998" blue="0.70971763129999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="selected" image="ic_no">
+                        <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
+                    </state>
+                </button>
+                <button opaque="NO" userInteractionEnabled="NO" contentMode="left" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tkc-ah-lxf">
+                    <rect key="frame" x="225.5" y="345" width="199.5" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <inset key="titleEdgeInsets" minX="17" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="2382 人已购买" image="ic_people">
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </state>
+                    <state key="disabled" title="支持“随时退款”" image="ic_no">
+                        <color key="titleColor" red="0.7097254395" green="0.70984917879999998" blue="0.70971763129999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="selected" image="ic_no">
+                        <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="wjD-7c-Yb9" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="39t-qz-sPz"/>
+                <constraint firstItem="eVF-8h-mcP" firstAttribute="top" secondItem="g5y-LO-BR3" secondAttribute="bottom" constant="10" id="4NG-ab-WIT"/>
+                <constraint firstItem="tkc-ah-lxf" firstAttribute="top" secondItem="eVF-8h-mcP" secondAttribute="top" id="4rK-af-hB2"/>
+                <constraint firstItem="eVF-8h-mcP" firstAttribute="leading" secondItem="g5y-LO-BR3" secondAttribute="leading" id="5SV-W4-imO"/>
+                <constraint firstItem="4SE-CV-2LG" firstAttribute="top" secondItem="g5y-LO-BR3" secondAttribute="top" id="5bb-M2-rkF"/>
+                <constraint firstAttribute="trailing" secondItem="nK9-TI-LWH" secondAttribute="trailing" constant="10" id="72a-8G-geI"/>
+                <constraint firstItem="hy4-6N-THZ" firstAttribute="top" secondItem="nK9-TI-LWH" secondAttribute="bottom" constant="8" id="7Bd-vP-XkF"/>
+                <constraint firstAttribute="trailing" secondItem="hy4-6N-THZ" secondAttribute="trailing" id="8bP-CK-u3f"/>
+                <constraint firstItem="tkc-ah-lxf" firstAttribute="trailing" secondItem="4SE-CV-2LG" secondAttribute="trailing" id="92s-jP-hMc"/>
+                <constraint firstItem="nK9-TI-LWH" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="9Qn-gt-6uc"/>
+                <constraint firstItem="Xkb-JF-Vre" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="BxM-p7-axC"/>
+                <constraint firstItem="Xkb-JF-Vre" firstAttribute="leading" secondItem="g5y-LO-BR3" secondAttribute="trailing" constant="30" id="C1h-YC-oaN"/>
+                <constraint firstItem="tkc-ah-lxf" firstAttribute="height" secondItem="4SE-CV-2LG" secondAttribute="height" id="DSX-IL-Cku"/>
+                <constraint firstItem="nK9-TI-LWH" firstAttribute="top" secondItem="wjD-7c-Yb9" secondAttribute="bottom" constant="18" id="Gf5-U7-MwR"/>
+                <constraint firstItem="eVF-8h-mcP" firstAttribute="width" secondItem="g5y-LO-BR3" secondAttribute="width" id="JFN-0T-o35"/>
+                <constraint firstItem="tkc-ah-lxf" firstAttribute="width" secondItem="4SE-CV-2LG" secondAttribute="width" id="M3h-pA-XR3"/>
+                <constraint firstItem="eVF-8h-mcP" firstAttribute="height" secondItem="g5y-LO-BR3" secondAttribute="height" id="MqB-kB-FCZ"/>
+                <constraint firstItem="hy4-6N-THZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Q7o-8t-jJ1"/>
+                <constraint firstItem="wjD-7c-Yb9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="Rsm-ky-GhI"/>
+                <constraint firstAttribute="bottom" secondItem="Xkb-JF-Vre" secondAttribute="bottom" constant="20" id="fEG-Rd-6o1"/>
+                <constraint firstItem="4SE-CV-2LG" firstAttribute="leading" secondItem="Xkb-JF-Vre" secondAttribute="trailing" constant="10" id="mxf-3o-MHp"/>
+                <constraint firstItem="g5y-LO-BR3" firstAttribute="leading" secondItem="wjD-7c-Yb9" secondAttribute="leading" id="nPQ-kH-8RB"/>
+                <constraint firstItem="tkc-ah-lxf" firstAttribute="leading" secondItem="4SE-CV-2LG" secondAttribute="leading" id="qJO-a0-TTI"/>
+                <constraint firstAttribute="trailing" secondItem="4SE-CV-2LG" secondAttribute="trailing" constant="5" id="rc0-PE-hGa"/>
+                <constraint firstItem="g5y-LO-BR3" firstAttribute="top" secondItem="hy4-6N-THZ" secondAttribute="bottom" constant="8" id="uHU-ue-Bdr"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="anyRefundBtn" destination="g5y-LO-BR3" id="aOO-uk-Rvb"/>
+                <outlet property="buyCountBtn" destination="tkc-ah-lxf" id="iPi-Hv-vyA"/>
+                <outlet property="descLabel" destination="nK9-TI-LWH" id="Wcy-r7-6v7"/>
+                <outlet property="expireRefundBtn" destination="eVF-8h-mcP" id="9mj-AH-4cQ"/>
+                <outlet property="iconView" destination="wjD-7c-Yb9" id="yiS-wi-hE7"/>
+                <outlet property="leftTimeBtn" destination="4SE-CV-2LG" id="wlg-n2-x6L"/>
+            </connections>
+            <point key="canvasLocation" x="-467" y="-152.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_no" width="19" height="19"/>
+        <image name="ic_people" width="22" height="22"/>
+        <image name="ic_time" width="22" height="22"/>
+        <image name="ic_yes" width="19" height="19"/>
+        <image name="placeholder_deal" width="273" height="172"/>
+        <image name="separator_dotline_item" width="459" height="1"/>
+        <image name="separator_refund_item" width="1" height="52"/>
+    </resources>
+</document>

@@ -7,6 +7,7 @@
 //
 
 #import "CollectionViewController.h"
+#import "YJDealTool.h"
 
 @interface CollectionViewController ()
 
@@ -19,6 +20,15 @@
     
     self.title = @"我的收藏";
     self.view.backgroundColor = [UIColor yellowColor];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self.collectionView selector:@selector(reloadData) name:@"collectionChanged" object:nil];
+    
+    _deals = (NSMutableArray *)[YJDealTool collectionDeals];
+}
+
+- (void)dealloc {
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self.collectionView];
 }
 
 - (void)didReceiveMemoryWarning {

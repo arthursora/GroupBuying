@@ -7,8 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Restriction.h"
 
-@interface YJDeal : NSObject
+@interface YJDeal : NSObject <NSCoding>
+
+//@property (nonatomic, weak) BOOL isCollect;
+
+//  团购所适用的商户列表
+@property (nonatomic, strong) NSArray *businesses;
 
 @property (nonatomic, copy) NSString *dealId;
 
@@ -30,5 +36,16 @@
 @property (nonatomic, copy) NSString *dealUrl;
 
 @property (nonatomic, copy) NSString *deal_h5_url;
+
+//  团购详情
+@property (nonatomic, copy) NSString *details;
+
+//  restrictions    list    团购限制条件
+@property (nonatomic, strong) Restriction *restrictions;
+
+//  notice    string    重要通知(一般为团购信息的临时变更)
+@property (nonatomic, copy) NSString *notice;
+
+@property (nonatomic, strong) NSArray *categories;
 
 @end

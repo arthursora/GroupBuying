@@ -7,6 +7,7 @@
 //
 
 #import "YJDeal.h"
+#import "YJBusiness.h"
 
 @implementation YJDeal
 
@@ -26,6 +27,13 @@
              };
 }
 
++ (NSDictionary *)mj_objectClassInArray {
+    
+    return @{
+             @"businesses":[YJBusiness class]
+             };
+}
+
 - (void)setCurrentPrice:(NSString *)currentPrice {
     
     _currentPrice = [self dealPrice:currentPrice];
@@ -35,6 +43,46 @@
     _listPrice = [self dealPrice:listPrice];
 }
 
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    
+    if (self = [super init]) {
+        
+        _dealId = [aDecoder decodeObjectForKey:@"dealId"];
+        _title = [aDecoder decodeObjectForKey:@"title"];
+        _sImageUrl = [aDecoder decodeObjectForKey:@"sImageUrl"];
+        _desc = [aDecoder decodeObjectForKey:@"desc"];
+        _currentPrice = [aDecoder decodeObjectForKey:@"currentPrice"];
+        _listPrice = [aDecoder decodeObjectForKey:@"listPrice"]; 
+        _purchaseCount = [aDecoder decodeIntegerForKey:@"purchaseCount"];
+        
+        _publishDate = [aDecoder decodeObjectForKey:@"publishDate"];
+        _purchaseDeadline = [aDecoder decodeObjectForKey:@"purchaseDeadline"];
+    }
+    return self;
+}
+
+- (BOOL)isEqual:(YJDeal *)other {
+    
+    return [self.dealId isEqualToString:other.dealId];
+}
+
+- (void)encodeWithCoder:(NSCoder *)aCoder {
+    
+    [aCoder encodeObject:_dealId forKey:@"dealId"];
+    [aCoder encodeObject:_sImageUrl forKey:@"sImageUrl"];
+    [aCoder encodeObject:_desc  forKey:@"desc"];
+    [aCoder encodeObject:_currentPrice forKey:@"currentPrice"];
+    [aCoder encodeObject:_listPrice forKey:@"listPrice"];
+    [aCoder encodeInteger:_purchaseCount forKey:@"purchaseCount"];
+    
+    [aCoder encodeObject:_title forKey:@"title"];
+    
+    [aCoder encodeObject:_publishDate forKey:@"publishDate"];
+    [aCoder encodeObject:_purchaseDeadline forKey:@"purchaseDeadline"];
+}
+
+//MJCodingImplementation
+
 - (NSString *)dealPrice:(NSString *)price {
     
     int loc = (int)[price rangeOfString:@"."].location;
@@ -43,5 +91,6 @@
     }
     return price;
 }
+
 
 @end

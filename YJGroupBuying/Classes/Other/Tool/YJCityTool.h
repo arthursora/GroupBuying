@@ -17,6 +17,8 @@
 
 + (YJGCity *)currentCity;
 
++ (YJGCity *)cityWithName:(NSString *)name;
+
 + (NSMutableArray *)totalCities;
 
 @end

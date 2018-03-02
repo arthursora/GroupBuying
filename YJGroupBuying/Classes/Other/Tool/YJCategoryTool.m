@@ -53,6 +53,18 @@ static NSMutableArray *_totalOrders;
     return _totalCategories;
 }
 
++ (NSString *)iconWithCategoryName:(NSString *)categoryName {
+    
+    for (YJCategory *cate in _totalCategories) {
+        
+        if ([cate.name isEqualToString:categoryName] || [cate.subcategories containsObject:categoryName]) {
+            return [cate.icon stringByReplacingOccurrencesOfString:@".png" withString:@""];
+        }
+    }
+    
+    return nil;
+}
+
 + (NSArray *)totalOrders {
     
     return _totalOrders;

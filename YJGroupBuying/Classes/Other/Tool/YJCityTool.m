@@ -16,12 +16,40 @@
 static NSMutableArray *_recentCities;
 static YJGCity *_currentCity;
 
+static NSMutableArray *_groups;
+static NSMutableDictionary *_allCities;
+
 + (void)initialize {
     
     _recentCities = [NSKeyedUnarchiver unarchiveObjectWithFile:YJRecentCityPath];
     if (_recentCities == nil) {
         _recentCities = [NSMutableArray array];
     }
+    
+    
+    _groups = [NSMutableArray array];
+    
+    NSMutableArray *hotCities = [NSMutableArray array];
+    
+    _allCities = [NSMutableDictionary dictionary];
+    NSArray *cityArr = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Cities" ofType:@"plist"]];
+    
+    for (NSDictionary *cityDict in cityArr) {
+        
+        YJGGroup *group = [YJGGroup mj_objectWithKeyValues:cityDict];
+        [_groups addObject:group];
+        
+        for (YJGCity *city in group.cities) {
+            if (city.hot) {
+                [hotCities addObject:city];
+            }
+            _allCities[city.name] = city;
+        }
+    }
+    YJGGroup *hotGroup = [[YJGGroup alloc] init];
+    hotGroup.name = @"热门城市";
+    hotGroup.cities = hotCities;
+    [_groups insertObject:hotGroup atIndex:0];
 }
 
 + (YJGCity *)currentCity {
@@ -36,6 +64,9 @@ static YJGCity *_currentCity;
     [_recentCities insertObject:city.name atIndex:0];
     
     [NSKeyedArchiver archiveRootObject:_recentCities toFile:YJRecentCityPath];
+    
+    NSDictionary *info = @{@"city":city};
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"cityChanged" object:info];
 }
 
 + (NSMutableArray *)recentCities {
@@ -46,47 +77,32 @@ static YJGCity *_currentCity;
 
 + (NSMutableArray *)totalCities {
     
-    NSMutableArray *groups = [NSMutableArray array];
-    
-    NSMutableArray *hotCities = [NSMutableArray array];
-    
-    NSMutableDictionary *allCities = [NSMutableDictionary dictionary];
-    NSArray *cityArr = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Cities" ofType:@"plist"]];
-    
-    for (NSDictionary *cityDict in cityArr) {
-        
-        YJGGroup *group = [YJGGroup mj_objectWithKeyValues:cityDict];
-        [groups addObject:group];
-        
-        for (YJGCity *city in group.cities) {
-            if (city.hot) {
-                [hotCities addObject:city];
-            }
-            allCities[city.name] = city;
-        }
+    YJGGroup *group = _groups[0];
+    if([group.name isEqualToString:@"最近访问"]) {
+        [_groups removeObject:group];
     }
-    YJGGroup *hotGroup = [[YJGGroup alloc] init];
-    hotGroup.name = @"热门城市";
-    hotGroup.cities = hotCities;
-    [groups insertObject:hotGroup atIndex:0];
     
-    NSArray *cityNames = [YJCityTool recentCities];
-    
+    NSArray *cityNames = [YJCityTool recentCities]; 
     if(cityNames.count) {
         
         NSMutableArray *recentCities = [NSMutableArray array];
         
         for (NSString *name in cityNames) {
-            YJGCity *city = allCities[name];
+            YJGCity *city = _allCities[name];
             [recentCities addObject:city];
         }
         
         YJGGroup *lastGroup = [[YJGGroup alloc] init];
         lastGroup.name = @"历史访问";
         lastGroup.cities = recentCities;
-        [groups insertObject:lastGroup atIndex:0];
+        [_groups insertObject:lastGroup atIndex:0];
     }
-    return groups;
+    return _groups;
+}
+
++ (YJGCity *)cityWithName:(NSString *)name {
+    
+    return _allCities[name];
 }
 
 @end

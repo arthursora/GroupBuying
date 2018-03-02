@@ -12,9 +12,12 @@
 #import "DealInfoViewController.h"
 #import "DealPicViewController.h"
 #import "DealMerchatViewController.h"
+#import "YJDealTool.h"
 
 @interface DealDetailViewController () <YJDetailDockDelegate>
-
+{
+    UIButton *_collectBtn;
+}
 @end
 
 @implementation DealDetailViewController
@@ -23,7 +26,7 @@
     [super viewDidLoad];
     
     DealInfoViewController *dealInfo = [[DealInfoViewController alloc] init];
-    dealInfo.view.backgroundColor = [UIColor redColor];
+    dealInfo.deal = _deal;
     [self addChildViewController:dealInfo];
     
     DealPicViewController *dealPic = [[DealPicViewController alloc] init];
@@ -37,6 +40,8 @@
     [self dockView:nil didSelectBtnFrom:0 to:0];
     
     [self setupUI];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(collectionChanged) name:@"collectionChanged" object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -51,6 +56,14 @@
     self.view.backgroundColor = GlobalBGColor;
     
     UIBarButtonItem *collectItem = [UIBarButtonItem itemWithImage:@"ic_deal_collect" higlightedImage:@"ic_deal_collect_pressed" target:self action:@selector(collect)];
+    
+    _collectBtn = collectItem.customView;
+    [_collectBtn setImage:[UIImage imageNamed:@"ic_collect_suc"] forState:UIControlStateSelected];
+    
+    if ([YJDealTool isCollected:_deal]) {
+        _collectBtn.selected = YES;
+    }
+    
     UIBarButtonItem *shareItem = [UIBarButtonItem itemWithImage:@"btn_share" higlightedImage:@"btn_share_pressed" target:self action:@selector(share)];
     self.navigationItem.rightBarButtonItems = @[shareItem, collectItem];
     
@@ -78,15 +91,30 @@
     CGFloat toW = YJGDetailViewWidth - 60;
     CGFloat toH = self.view.frame.size.height;
     toVC.view.frame = CGRectMake(0, 0, toW, toH);
-    YJLog(@"%@", NSStringFromCGRect(toVC.view.frame));
     
     toVC.view.autoresizingMask = UIViewAutoresizingFlexibleHeight;
-    
     [self.view insertSubview:toVC.view atIndex:0];
 }
 
 - (void)collect {
-    YJLog(@"---collect---");
+    
+    if (_collectBtn.selected) {
+        [YJDealTool uncollect:_deal];
+    }else {
+        [YJDealTool collect:_deal];
+    }
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"collectionChanged" object:nil];
+}
+
+- (void)collectionChanged {
+    
+    _collectBtn.selected = [YJDealTool isCollected:_deal];
+}
+
+- (void)dealloc {
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)share {

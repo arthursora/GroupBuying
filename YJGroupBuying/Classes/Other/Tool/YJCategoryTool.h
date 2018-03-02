@@ -14,6 +14,8 @@
 
 + (NSArray *)totalCategories;
 
++ (NSString *)iconWithCategoryName:(NSString *)categoryName;
+
 + (NSArray *)totalOrders;
 
 @end

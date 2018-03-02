@@ -7,6 +7,7 @@
 //
 
 #import "YJGMoreButton.h"
+#import "YJMoreViewController.h"
 
 @implementation YJGMoreButton
 
@@ -19,9 +20,20 @@
         
         [self setBackgroundImage:[UIImage imageNamed:@"bg_tabbar_item"] forState:UIControlStateHighlighted];
         
+        [self addTarget:self action:@selector(moreClick) forControlEvents:UIControlEventTouchUpInside];
+        
         self.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
     }
     return self;
+}
+
+- (void)moreClick {
+    
+    YJMoreViewController *more = [[YJMoreViewController alloc] init];
+    YJNavigationController *nav = [[YJNavigationController alloc] initWithRootViewController:more];
+    nav.modalPresentationStyle = UIModalPresentationFormSheet;
+    
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:nav animated:YES completion:nil];
 }
 
 /*

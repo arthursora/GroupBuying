@@ -6,9 +6,9 @@
 //  Copyright © 2018年 朱亚杰. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseDealListViewController.h"
 
-@interface CollectionViewController : UIViewController
+@interface CollectionViewController : BaseDealListViewController
 
 @end
  
